@@ -1,0 +1,398 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+}
+/*header*/
+header{
+  width: 100%;
+  background-color: #000;
+  padding: 5px 15px;
+  /* position: fixed;
+  z-index: 1; */
+}
+header a, span{
+  margin: 0;
+  color: #fff;
+  font-size: 15px;
+  text-transform: capitalize;
+}
+.fnav{
+  width: 100%;
+  background-color: #fff;
+  text-align: center;
+  padding: 5px 15px;
+}
+.fcontainer {
+  position: relative;
+  width: 100%;
+  height: 645px; 
+  background-image: url('./image/glossier-homepage-complexion-desktop.avif');
+  background-position: top 20px center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+.fshopnow{
+  width: 26%;
+  position: absolute;
+  top: 70px;
+  left: 15px;
+  background-color: #fff;
+  padding: 20px;
+}
+.ftitle{
+  font-weight: 400;
+  font-size: 12px;
+  letter-spacing: 0.04px;
+  line-height:2;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+.ftext{
+  font-size: 23px;
+  font-weight: 200;
+  letter-spacing: 1px;
+  line-height: 25px;
+  margin-bottom: 8px;
+}
+.fcont{
+  font-size: 15px;
+  line-height: 20px;
+  margin-bottom: 8px;
+}
+.fbtn {
+  height: 40px;
+  background: transparent;
+  border-left: none;
+  border-right: .5px solid #000;
+  border-top: none;
+  border-bottom: .5px solid #000;
+  position: relative;
+  overflow: hidden;
+}
+.fbtn a {
+  text-decoration: none;
+  color: #000;
+  padding: 8px 16px;
+}
+.fbtn:hover {
+  border: none;
+  cursor: pointer;
+}
+.fbtn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 2px dotted transparent;
+  z-index: 0;
+  transition: border-color 0.3s;
+}
+.fbtn:hover::before {
+  border-color: #000;
+  animation: border-dots 1s infinite linear;
+}
+.fglossier{
+  width: 100%;
+  position: absolute;
+  bottom: -95px;
+  right: 22px;
+}
+.fglossier h1{
+  font-style: italic;
+  font-size: 390px;
+  color: #fff;
+}
+.fcontainer2{
+  width: 100%;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+.fcont-grid{
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  font-size: 13px;
+  color: #302f2f;
+}
+.ml{
+  margin-left: 15px;
+}
+.mb{
+  margin-bottom: 20px;
+}
+.mb2{
+  margin-bottom: 10px;
+}
+.fcont-grid2{
+  margin: auto;
+  width: 98%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+.img1{
+  width: 100%;
+  height: 700px;
+  background-image: url('./image/glossier-homepage-complexion-img1.avif');
+  background-size: cover;
+  background-position: bottom 5px center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+.img2{
+  width: 100%;
+  height: 700px;
+  background-image: url('./image/glossier-homepage-complexion-img2.avif');
+  background-size: cover;
+  background-position: bottom 5px center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+.fbtn2{
+  height: 40px;
+  background: #fff;
+  border-left: none;
+  border-right: .5px solid #000;
+  border-top: none;
+  border-bottom: .5px solid #000;
+  position: absolute;
+  left: 40%;
+  top: 50%;
+  overflow: hidden;
+}
+.fbtn2 a {
+  text-decoration: none;
+  color: #000;
+  padding: 8px 16px;
+}
+.fbtn2:hover {
+  border: none;
+  cursor: pointer;
+}
+.fbtn2::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 2px dotted transparent;
+  z-index: 0;
+  transition: border-color 0.3s;
+}
+
+.fbtn2:hover::before {
+  border-color: #000;
+  animation: border-dots 1s infinite linear;
+}
+.info3{
+  font-size: 13px;
+  color: #302f2f;
+}
+.flex{
+  display: flex;
+}
+.justify-end{
+  justify-content: end;
+}
+.mr{
+  margin-right: 10px;
+}
+.fbtn3 {
+  height: 40px;
+  background: transparent;
+  border-left: none;
+  border-right: .5px solid #000;
+  border-top: none;
+  border-bottom: .5px solid #000;
+  position: relative;
+  overflow: hidden;
+}
+.fbtn3 a {
+  text-decoration: none;
+  color: #000;
+  padding: 8px 16px;
+}
+.fbtn3:hover {
+  border: none;
+  cursor: pointer;
+}
+.fbtn3::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 2px dotted transparent;
+  z-index: 0;
+  transition: border-color 0.3s;
+}
+
+.fbtn3:hover::before {
+  border-color: #000;
+  animation: border-dots 1s infinite linear;
+}
+.fcontainer3 {
+  width: 100%;
+  margin-bottom: 100px;
+}
+.fcont-grid3 {
+  margin: auto;
+  width: 98%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+.grid-item {
+  position: relative;
+  cursor: pointer;
+}
+.img-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+.img-wrapper img {
+  width: 100%;
+  transition: opacity 0.5s ease-in-out;
+}
+.img-wrapper img.back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+.cont-info{
+  margin-top: 10px;
+  font-size: 14px;
+}
+.cont-info p{
+  margin-bottom: 5px;
+}
+.c{
+  color: #8f8e8e;
+}
+.cont-info h6{
+  font-size: 15px;
+  font-weight: 100;
+  margin-bottom: 5px;
+}
+.color-grid div{
+  background-color: #f1f1f1;
+  width: 42px;
+  height: 42px;
+  border: .5px solid #000;
+}
+.brown{
+  width: 40px;
+  height: 40px;
+  border: .5px solid #fff;
+  background-color: #b7312c;
+}
+.lightb{
+  position: relative;
+  width: 42px;
+  height: 42px;
+  background-color:#e8927c ;
+}
+.lightb::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 2px dotted transparent;
+  z-index: 0;
+  transition: border-color 0.3s;
+}
+.lightb:hover::before {
+  border-color: #000;
+  animation: border-dots 1s infinite linear;
+}
+.td{
+  text-decoration: line-through;
+  color: #8f8e8e;
+}
+.fbtn4 {
+  width: 100%;
+  height: 40px;
+  background: transparent;
+  border-left: none;
+  border-right: .5px solid #000;
+  border-top: none;
+  border-bottom: .5px solid #000;
+  position: relative;
+  overflow: hidden;
+}
+.fbtn4 a {
+  text-align: center;
+  text-decoration: none;
+  color: #000;
+  padding: 8px 16px;
+}
+.fbtn4:hover {
+  border: none;
+  cursor: pointer;
+}
+.fbtn4::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 2px dotted transparent;
+  z-index: 0;
+  transition: border-color 0.3s;
+}
+.fbtn4:hover::before {
+  border-color: #000;
+  animation: border-dots2 1s infinite linear;
+}
+.mt{
+  margin-top: 61px;
+}
+@keyframes border-dots {
+  0% {
+    clip-path: inset(0 0 0 0);
+  }
+  25% {
+    clip-path: inset(0 0 50% 0);
+  }
+  50% {
+    clip-path: inset(50% 0 0 0);
+  }
+  75% {
+    clip-path: inset(0 50% 0 0);
+  }
+  100% {
+    clip-path: inset(0 0 0 50%);
+  }
+}
+@keyframes border-dots2 {
+  0% {
+    clip-path: inset(0 0 0 0);
+  }
+  25% {
+    clip-path: inset(0 0 50% 0);
+  }
+  100% {
+    clip-path: inset(0 0 0 50%);
+  }
+}
+
+  
+
+
+
