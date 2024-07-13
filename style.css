@@ -135,6 +135,9 @@ header a, span{
 .mb2{
   margin-bottom: 10px;
 }
+.mb3{
+  margin-bottom: 4px;
+}
 .fcont-grid2{
   margin: auto;
   width: 98%;
@@ -484,6 +487,9 @@ input{
 #err-msg{
   color: red;
   display: none;
+}
+.error{
+  border-bottom: red;
 }
 .email{
   margin-left: 60px;

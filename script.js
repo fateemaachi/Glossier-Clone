@@ -40,6 +40,26 @@ $(document).ready(function(){
       $(this).find('.back').stop().fadeTo(500, 0);
     }
   );
+
+  $('#email').mouseout(function() {
+    $(this).css('border-bottom', '0.5px solid red');
+    $('#err-msg').show();
+  });
+
+  $('#subBtn').click(function(e) {
+    e.preventDefault(); // Prevent form submission or button default behavior
+    var email = $('#email').val();
+    var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (email === "" || !emailRegex.test(email)) {
+      $('#err-msg').show();
+      $('#email').addClass('error');
+    } else {
+      $('#err-msg').hide();
+      $('#email').removeClass('error');
+      
+    }
+  });
 });
 
 // var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
