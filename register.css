@@ -61,8 +61,9 @@ input[type="checkbox"]{
   cursor: pointer;
 }
 .checkbox span{
+  font-size: 12px;
   color: grey;
-  text-decoration: underline;
+  border-bottom: 1px solid black;
 }
 .checkbox p{
   font-size: 12px;
