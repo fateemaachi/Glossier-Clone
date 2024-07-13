@@ -46,10 +46,10 @@ $(document).ready(function(){
     $('#err-msg').show();
   });
 
-  $('#subBtn').click(function(e) {
-    e.preventDefault(); // Prevent form submission or button default behavior
-    var email = $('#email').val();
-    var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  $('#subBtn').click(function(event) {
+    event.preventDefault(); // Prevent form submission or button default behavior
+    const email = $('#email').val();
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
     if (email === "" || !emailRegex.test(email)) {
       $('#err-msg').show();
@@ -57,7 +57,6 @@ $(document).ready(function(){
     } else {
       $('#err-msg').hide();
       $('#email').removeClass('error');
-      
     }
   });
 });

@@ -68,6 +68,11 @@ input[type="checkbox"]{
 .checkbox p{
   font-size: 12px;
 }
+#cbErr {
+  margin-top: -5px;
+  color: red;
+  display: none;
+}
 /* main */
 .click{
   border-bottom: #000;
