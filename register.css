@@ -29,7 +29,54 @@ header a, span{
   text-align: center;
   padding: 5px 15px;
 }
+.registration{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+}
+.registration h2{
+  margin-bottom: 30px;
+  margin-right: 200px;
+}
+#regForm{
+  margin-bottom: 100px;
+}
+#regForm input{
+  padding: 10px;
+  outline: none;
+  border: .5px solid rgb(206, 206, 206);
+}
+#regForm p {
+  color: red;
+  margin-top: 3px;
+  margin-bottom: 5px;
+}
+.checkbox{
+  cursor: pointer;
+}
+input[type="checkbox"]{
+  cursor: pointer;
+}
+.checkbox span{
+  color: grey;
+  text-decoration: underline;
+}
+.checkbox p{
+  font-size: 12px;
+}
 /* main */
+.click{
+  border-bottom: #000;
+}
+.error{
+  border-bottom: .5px solid #ff0000;
+}
+.hide{
+  display: none;
+}
 .ml{
   margin-left: 15px;
 }
@@ -60,21 +107,30 @@ header a, span{
 .justify-btw{
   justify-content: space-between;
 }
+.align{
+  align-items:center;
+}
 .fbtn3 {
   height: 40px;
   background: #f7f7f7;
-  border: .5px solid #000;
+  border-top: none;
+  border-left: none;
+  border-right: .5px solid #000;
+  border-bottom: .5px solid #000;
   position: relative;
   overflow: hidden;
-  padding: 0 20px;
+  padding: 0 15px;
 }
 .fbtn3b {
   height: 41px;
-  background: #f7f7f7;
-  border: none;
+  background: none;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: .5px solid #000;
   position: relative;
   overflow: hidden;
-  padding: 0 20px;
+  padding: 0 15px;
 }
 .fbtn3 a, .fbtn3b a {
   text-decoration: none;
@@ -83,6 +139,10 @@ header a, span{
 }
 .fbtn3:hover {
   border: none;
+  cursor: pointer;
+}
+.fbtn3b:hover {
+  border-bottom: none;
   cursor: pointer;
 }
 .fbtn3::before, .fbtn3b::before {
@@ -144,7 +204,7 @@ footer{
   font-size: 15px;
   line-height: 1.5;
 }
-input{
+.email input{
   width: 520px;
   padding: 15px 10px;
   margin-bottom: 10px;
@@ -189,7 +249,7 @@ input{
   font-size: 14px;
 }
 .footer-grid ul li{
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   font-size: 14px;
 }
 .footer-grid ul li:hover{
