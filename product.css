@@ -29,103 +29,54 @@ header a, span{
   text-align: center;
   padding: 5px 15px;
 }
-/* main */
-.fcontainer {
-  position: relative;
+.mini-nav{
   width: 100%;
-  height: 645px; 
-  background-image: url('./image/glossier-homepage-complexion-desktop.avif');
-  background-position: top 20px center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  cursor: pointer;
-}
-.fshopnow{
-  width: 26%;
-  position: absolute;
-  top: 70px;
-  left: 15px;
-  background-color: #fff;
-  padding: 20px;
-}
-.ftitle{
-  font-weight: 400;
-  font-size: 12px;
-  letter-spacing: 0.04px;
-  line-height:2;
-  text-transform: uppercase;
-  margin-bottom: 8px;
-}
-.ftext{
-  font-size: 23px;
-  font-weight: 200;
-  letter-spacing: 1px;
-  line-height: 25px;
-  margin-bottom: 8px;
-}
-.fcont{
-  font-size: 15px;
-  line-height: 20px;
-  margin-bottom: 8px;
-}
-.fbtn {
+  background-color: #e8e8e8;
+  padding: 0px 20px 0px 20px;
   height: 40px;
-  background: transparent;
-  border-left: none;
-  border-right: .5px solid #000;
-  border-top: none;
-  border-bottom: .5px solid #000;
-  position: relative;
-  overflow: hidden;
+  align-items: center;
+  /* position: fixed; */
+  margin-bottom: 45px;
 }
-.fbtn a {
-  text-decoration: none;
+.left-side ul{
+  padding: 0;
+  margin: 0;
+}
+.left-side ul li a{
   color: #000;
-  padding: 8px 16px;
+  font-size: 15px;
+  margin-left: 10px;
 }
-.fbtn:hover {
-  border: none;
-  cursor: pointer;
+.right-side ul{
+  margin: 0;
 }
-.fbtn::before {
-  content: "";
+.right-side ul li a, span{
+  color: #000;
+  font-size: 15px;
+  margin-left: 10px;
+}
+legend{
+  font-size: 15px;
+  margin-left: 10px;
+}
+.options{
+  display: none;
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 36px;
   right: 0;
-  bottom: 0;
-  border: 2px dotted transparent;
-  z-index: 0;
-  transition: border-color 0.3s;
+  /* padding: 0 37px; */
+  border: .5px solid #000;
 }
-.fbtn:hover::before {
-  border-color: #000;
-  animation: border-dots 2s infinite linear;
+.options option{
+  margin: 0;
+  cursor: default;
+  padding: 0 37px;
 }
-.fglossier{
-  width: 100%;
-  position: absolute;
-  bottom: -95px;
-  right: 22px;
+.x{
+  background:#0000cdcf;
 }
-.fglossier h1{
-  font-style: italic;
-  font-size: 372px;
-  color: #fff;
-}
-.fcontainer2{
-  width: 100%;
-  margin-top: 100px;
-  margin-bottom: 100px;
-}
-.fcont-grid{
-  width: 100%;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 15px;
-  font-size: 13px;
-  color: #302f2f;
-}
+
+/* main */
 .ml{
   margin-left: 15px;
 }
@@ -135,71 +86,8 @@ header a, span{
 .mb2{
   margin-bottom: 10px;
 }
-.fcont-grid2{
-  margin: auto;
-  width: 98%;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 15px;
-}
-.img1{
-  width: 100%;
-  height: 700px;
-  background-image: url('./image/glossier-homepage-complexion-img1.avif');
-  background-size: cover;
-  background-position: bottom 5px center;
-  background-repeat: no-repeat;
-  position: relative;
-}
-.img2{
-  width: 100%;
-  height: 700px;
-  background-image: url('./image/glossier-homepage-complexion-img2.avif');
-  background-size: cover;
-  background-position: bottom 5px center;
-  background-repeat: no-repeat;
-  position: relative;
-}
-.fbtn2{
-  height: 40px;
-  background: #fff;
-  border-left: none;
-  border-right: .5px solid #000;
-  border-top: none;
-  border-bottom: .5px solid #000;
-  position: absolute;
-  left: 40%;
-  top: 50%;
-  overflow: hidden;
-}
-.fbtn2 a {
-  text-decoration: none;
-  color: #000;
-  padding: 8px 16px;
-}
-.fbtn2:hover {
-  border: none;
-  cursor: pointer;
-}
-.fbtn2::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  border: 2px dotted transparent;
-  z-index: 0;
-  transition: border-color 0.3s;
-}
-
-.fbtn2:hover::before {
-  border-color: #000;
-  animation: border-dots 2s infinite linear;
-}
-.info3, .info4{
-  font-size: 13px;
-  color: #302f2f;
+.mb3{
+  margin-bottom: 5px;
 }
 .flex{
   display: flex;
@@ -210,17 +98,25 @@ header a, span{
 .mr{
   margin-right: 20px;
 }
+.info3{
+  font-size: 13px;
+  color: #302f2f;
+}
 .fbtn3 {
   height: 40px;
-  background: transparent;
-  border-left: none;
-  border-right: .5px solid #000;
-  border-top: none;
-  border-bottom: .5px solid #000;
+  background: #f7f7f7;
+  border: .5px solid #000;
   position: relative;
   overflow: hidden;
 }
-.fbtn3 a {
+.fbtn3b {
+  height: 40px;
+  background: #f7f7f7;
+  border: none;
+  position: relative;
+  overflow: hidden;
+}
+.fbtn3 a, .fbtn3b a {
   text-decoration: none;
   color: #000;
   padding: 8px 16px;
@@ -229,7 +125,7 @@ header a, span{
   border: none;
   cursor: pointer;
 }
-.fbtn3::before {
+.fbtn3::before, .fbtn3b::before {
   content: "";
   position: absolute;
   top: 0;
@@ -241,7 +137,7 @@ header a, span{
   transition: border-color 0.3s;
 }
 
-.fbtn3:hover::before {
+.fbtn3:hover::before, .fbtn3b:hover::before {
   border-color: #000;
   animation: border-dots 2s infinite linear;
 }
@@ -252,6 +148,8 @@ header a, span{
 }
 .fcont-grid3 {
   margin: auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   width: 98%;
   margin-bottom: 30px;
   overflow-x: hidden;
@@ -293,7 +191,7 @@ header a, span{
 .cont-info p{
   margin-bottom: 5px;
 }
-.c{
+.c, .cb{
   color: #8f8e8e;
 }
 .cont-info h6{
