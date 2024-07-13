@@ -11,6 +11,8 @@ $(document).ready(function(){
 
   // switch to login page
   $('.fbtn3b').click(function(){
+    // Reset form state before navigating
+    resetForm();
     window.location.href = 'login.html'
   });
 
@@ -103,6 +105,7 @@ $(document).ready(function(){
     if(valid){
       localStorage.setItem('formData', JSON.stringify(formData));
       alert('Registration successful');
+      resetForm(); // Reset form after successful submission
       window.location.href = 'login.html';
     }
     $('#fName').val('');
@@ -144,6 +147,14 @@ $(document).ready(function(){
           errorField.hide();
           inputField.css('border-bottom', 'none');
       }
+  }
+
+   // Function to reset form state (hide all errors and reset borders)
+   function resetForm() {
+    $('#errfName, #errlName, #errEmail, #errPass, #errPass2, #cbErr').hide();
+    $('#fName, #lName, #email2, #password, #number').css('border-bottom', '0.5px solid black');
+    $('#tick').prop('checked', false);
+    $('#cbMsg, .number').hide();
   }
   
 });

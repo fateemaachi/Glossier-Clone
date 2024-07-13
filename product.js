@@ -16,7 +16,7 @@ $(document).ready(function(){
   );
 
   $('#show').click(function(){
-    $('.options').show()
+    $('.options').toggle()
   });
 
   $('.y').hover(
