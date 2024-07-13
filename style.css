@@ -496,7 +496,7 @@ input{
   color: grey;
 }
 #subBtn{
-  height: 47px;
+  height: 52px;
   padding: 10px;
   background-color: #fff;
   border-top: none;
@@ -550,6 +550,9 @@ input{
  }
  a{
   text-decoration: none;
+ }
+ ul{
+  padding-left: 0;
  }
  /* .chatbox{
   position: fixed;
