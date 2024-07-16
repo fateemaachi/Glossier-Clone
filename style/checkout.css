@@ -1,0 +1,79 @@
+.checkLogo {
+  width: 200px;
+  margin-bottom: 10px;
+  margin-left: -20px;
+}
+.checkoutContainer {
+  grid-template-columns: 1.5fr 1fr;
+}
+.input {
+  border: 1px solid #e7e7e7;
+  width: 100%;
+  padding: 10px 20px;
+  margin-bottom: 10px;
+}
+label {
+  font-size: 14px;
+}
+.information {
+  padding: 40px 10vw;
+}
+.information i {
+  margin: 0 10px;
+  font-size: 12px;
+}
+.infoCard {
+  margin: 30px 0;
+}
+.titleContainer {
+  margin-bottom: 20px;
+}
+.title {
+  font-size: 24px;
+  font-weight: 600;
+}
+.checkBox {
+  margin-top: 10px;
+  gap: 15px;
+}
+.radio {
+  gap: 10px;
+}
+.username {
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+.userAddress {
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+}
+.btnContainer .btn {
+  width: 40%;
+}
+.cartSummary {
+  background-color: #f7f7f7;
+  padding: 40px;
+}
+.summaryCard {
+  padding: 10px;
+  height: 150px;
+  display: grid;
+  grid-template-columns: 100px 1fr;
+}
+.discountCard {
+  padding: 10px 0;
+  padding-top: 20px;
+}
+.totalCard {
+  padding: 20px 0;
+}
+.summaryImage {
+  margin-right: 15px;
+  height: 100%;
+}
+.summaryImage img {
+  width: 100%;
+}
+.total {
+  font-size: 28px;
+}

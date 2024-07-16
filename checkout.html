@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style/shared.css" />
+    <link rel="stylesheet" href="./style/checkout.css" />
+    <script
+      src="https://kit.fontawesome.com/4c9b763486.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="grid checkoutContainer">
+      <div class="information">
+        <img src="./images/logo.png" alt="" class="checkLogo" />
+        <div class="flex align-center">
+          <p>Cart</p>
+          <i class="fa-solid fa-chevron-right"></i>
+          <p style="font-weight: 600">Information</p>
+          <i class="fa-solid fa-chevron-right"></i>
+          <p>Shipping</p>
+          <i class="fa-solid fa-chevron-right"></i>
+          <p>Payment</p>
+        </div>
+        <div class="infoCard">
+          <div class="flex justify-between align-center titleContainer">
+            <h2 class="title">Contact Information</h2>
+            <p>Have an account? Log in</p>
+          </div>
+          <input type="text" placeholder="Email" class="input" />
+          <div class="checkBox flex align-center">
+            <input type="checkbox" name="emailCheck" id="emailCheck" checked />
+            <label for="emailCheck">Email me with news and offers</label>
+          </div>
+        </div>
+        <div class="infoCard">
+          <div class="titleContainer">
+            <h2 class="title">How do you want this order delivered?</h2>
+          </div>
+          <div class="input">
+            <div class="radio flex align-center">
+              <input type="radio" name="ship" id="ship" />
+              <label for="ship">Ship</label>
+            </div>
+          </div>
+          <div class="input">
+            <div class="radio flex align-center">
+              <input type="radio" name="pickUp" id="pickUp" />
+              <label for="pickUp">Pick Up</label>
+            </div>
+          </div>
+        </div>
+        <div class="infoCard">
+          <div class="titleContainer">
+            <h2 class="title">Where's this order going?</h2>
+          </div>
+          <select name="" id="" class="input">
+            <option value="">Nigeria</option>
+          </select>
+          <div class="grid username">
+            <input type="text" class="input" placeholder="First name" />
+            <input type="text" class="input" placeholder="Last name" />
+          </div>
+          <input type="text" class="input" placeholder="Address" />
+          <input type="text" class="input" placeholder="Apt / Floor/ Suite" />
+          <div class="grid userAddress">
+            <input type="text" class="input" placeholder="City" />
+            <select name="" id="" class="input">
+              <option value="">State</option>
+            </select>
+            <input
+              type="text"
+              class="input"
+              placeholder="Postal code (optional)"
+            />
+          </div>
+          <div class="checkBox flex align-center">
+            <input type="checkbox" name="saveCheck" id="saveCheck" />
+            <label for="saveCheck"> Save this information for next time</label>
+          </div>
+          <div class="checkBox flex align-center">
+            <input type="checkbox" name="offerCheck" id="offerCheck" />
+            <label for="offerCheck">Text me with news and offers</label>
+          </div>
+        </div>
+        <div class="infoCard">
+          <div class="titleContainer">
+            <h2 class="title">Gift Options</h2>
+          </div>
+          <div class="checkBox flex align-center">
+            <input type="checkbox" name="giftCheck" id="giftCheck" />
+            <label for="giftCheck">Add a gift message</label>
+          </div>
+        </div>
+        <div class="btnContainer flex justify-between align-center">
+          <a
+            class="btn btn-tertiary"
+            href="./index.html"
+            style="display: inline-block"
+            >Continue to shipping</a
+          ><a class="btn-remove">Return to cart</a>
+        </div>
+      </div>
+      <div class="cartSummary">
+        <div class="summaryCard orderItem border-b-dark">
+          <div class="summaryImage">
+            <img src="./images/cartItem-1.avif" alt="" />
+          </div>
+          <div class="cartCard_right flex column justify-between">
+            <div class="cartCard_top flex justify-between">
+              <p>Utility Sling</p>
+              <p>₦39,700</p>
+            </div>
+          </div>
+        </div>
+        <div class="discountCard border-b-dark">
+          <input
+            type="text"
+            placeholder="Discount code or gift card"
+            class="input"
+          />
+        </div>
+        <div class="totalCard border-b-dark">
+          <div
+            class="priceItem flex justify-between align-center"
+            style="margin-bottom: 10px"
+          >
+            <p>Subtotal</p>
+            <p>₦39,700.00</p>
+          </div>
+          <div class="priceItem flex justify-between align-center">
+            <p>Shipping</p>
+            <p>Calculated at next step</p>
+          </div>
+        </div>
+        <div class="totalCard">
+          <div class="priceItem flex justify-between align-center">
+            <p>Total</p>
+            <p>NGN <span class="total"> ₦39,700.00</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

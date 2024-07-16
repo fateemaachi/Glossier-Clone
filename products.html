@@ -12,171 +12,151 @@
   <script src="https://kit.fontawesome.com/eba01fdb8d.js" crossorigin="anonymous"></script>
   <script src="https://kit.fontawesome.com/4c9b763486.js"crossorigin="anonymous"
   ></script>
-  <link rel="stylesheet" href="styles/login.css">
+  <link rel="stylesheet" href="styles/product.css">
   <link rel="stylesheet" href="./style/shared.css" />
-  <title>Account-Glossier</title>
+ 
+  <title>Fragrance-Glossier</title>
 </head>
 <body>
   <header>
     <span> <a href="#">limited edition balm quintet:</a> 5 flavors + sticker sheet!</span>
   </header>
   <!--insert nav here-->
-  <div class="nav">
-    <nav>
-      <div class="logoContainer">
-        <a href="index.html" class="flex column"
-          ><img src="./images/logo.png" alt="" class="logo" />
-        </a>
-        <p class="hideText">you look good.</p>
-      </div>
-      <ul>
-        <li>skincare</li>
-        <li>makeup</li>
-        <li>balms</li>
-        <li>body</li>
-        <li id="fragrance">fragrance</li>
-        <li>glossier goods</li>
-        <li>sets</li>
+  <div class="fnav">insert nav here</div>
+  <div class="mini-nav flex justify-btw">
+    <div class="left-side">
+      <ul class="flex">
+        <li><a href="#">Glossier You</a></li>
+        <li><a href="#">Glossier You Travel Spray</a></li>
+        <li><a href="#" style="text-decoration: underline;">All fragrance</a></li>
       </ul>
-      <ul>
-        <li><i class="fa-solid fa-globe" style="margin-right: 5px"></i>Ng</li>
-        <li>search</li>
-        <li>stores</li>
-        <li>log in</li>
-        <li id="bag">bag</li>
-      </ul>
-    </nav>
-    <section class="fragrance">
-      <!-- <div class="flex" style="gap: 100px"> -->
-      <div>
-        <ul>
-          <li>Shop All</li>
-          <li>Bestsellers</li>
-        </ul>
-        <div style="margin-top: 30px">
-          <p style="color: #0600ff; margin-bottom: 10px">New</p>
-          <ul>
-            <li>Limited Edition Summer Collection</li>
-            <li>Lip Line</li>
-            <li>Balm Dotcom Original Formula</li>
-          </ul>
-        </div>
-      </div>
-      <ul>
-        <li>Glossier You</li>
-        <li>Glossier You Travel Spray</li>
-        <li>All fragrance</li>
-      </ul>
-      <!-- </div> -->
-      <div class="fragranceImg">
-        <img src="./images/fragranceNav.avif" alt="" />
-        <div class="flex justify-between align-center">
-          <button class="btn-link">Shop all fragrance</button>
-          <i class="fa-solid fa-arrow-right"></i>
-        </div>
-      </div>
-    </section>
-    <section class="cartModal">
-      <div class="sideCart">
-        <div class="sideCart_top flex justify-between">
-          <a href="index.html"
-            ><img src="./images/logo.png" alt="" class="logo" />
+    </div>
+    <div class="right-side">
+      <ul class="flex">
+        <li style="position: relative;">
+          <a href="#" class="flex" id="show">
+            <span>View</span>
+              <div class="product-wrapper flex">
+                <span class="Lparen">(</span>
+                <legend>Product</legend>
+                <span class="Rparen">)</span>
+              </div>
           </a>
-          <ul class="flex align-center" style="gap: 50px">
-            <li>Bag</li>
-            <li id="close"><i class="fa-solid fa-xmark"></i></li>
-          </ul>
+          <div class="options">
+            <option class="x">Product</option>
+            <option class="y">Shade</option>
+        </li>
+        <li>
+         <a href="#" class="flex">
+          <span>Filter</span>
+            <div class="filter flex">
+              <span class="Lparen">(</span>
+              <legend>0</legend>
+              <span class="Rparen">)</span>
+            </div>
+         </a>
+        </li>
+        <li>
+          <a href="#" class="flex">
+            <span>Sort</span>
+              <div class="featured flex">
+                <span class="Lparen">(</span>
+                <legend>Featured</legend>
+                <span class="Rparen">)</span>
+              </div>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="fcontainer3">
+    <div class="fcont-grid3">
+      <div class="grid-item">
+        <div class="img-wrapper mr">
+          <img class="front" src="https://glossier-prod.imgix.net/files/glossier-you-50ml-carousel-01.png?auto=compress,format&cs=srgb&w={width}" alt="img">
+          <img class="back" src="https://glossier-prod.imgix.net/files/glossier-you-50ml-carousel-02.png?auto=compress,format&cs=srgb&w={width}" alt="img2">
         </div>
-
-        <div class="sideCart_bottom flex justify-between column">
-          <div class="">
-            <h4>Shopping bag</h4>
-            <p class="freeShipping">
-              ₦105,910 away from free express shipping
-            </p>
-
-            <div class="cartCard">
-              <div class="cartImage">
-                <img src="./images/cartItem-1.avif" alt="" />
-              </div>
-              <div class="cartCard_right flex column justify-between">
-                <div class="cartCard_top flex justify-between">
-                  <p>Utility Sling</p>
-                  <p>₦39,700</p>
-                </div>
-                <div class="cartCard_bottom flex justify-between">
-                  <div class="count">1</div>
-                  <button class="btn-remove">remove</button>
-                </div>
-              </div>
-            </div>
-            <div
-              class="flex justify-between padding-10"
-              style="background-color: #f0f0f0"
-            >
-              <p>Subtotal</p>
-              <p>₦39,700</p>
-            </div>
-            <div
-              class="flex justify-between padding-10"
-              style="background-color: #f7f7f7"
-            >
-              <p>Tax calculated in checkout</p>
-              <p>₦39,700</p>
-            </div>
-            <p
-              class="padding-10"
-              style="
-                font-size: 12px;
-                color: #666;
-                letter-spacing: 0.5px;
-                line-height: 15px;
-              "
-            >
-              Shipping and promotions calculated in checkout. <br /><br />
-              Sales tax amount shown in checkout is a best estimate and may
-              differ from amount actually charged and shown on Order
-              Confirmation email.
-            </p>
-          </div>
-          <div class="cartButton padding-10">
-            <div class="flex justify-between" style="margin-bottom: 10px">
-              <p>Estimated total</p>
-              <p>₦39,700</p>
-            </div>
-            <button class="btn btn-tertiary">checkout</button>
-            <p style="font-size: 12px; color: #666; margin-top: 10px">
-              By checking out, you agree to our Terms of Use and Privacy
-              Policy.
-            </p>
+        <div class="cont-info">
+          <p>Glossier You</p>
+          <p class="c">Eau de parfum</p>
+          <p class="cb" style="display: none;
+          font-style: italic;">50 mL</p>
+          <h6>&#8358;128,800</h6>
+          <div class="info-btn flex">
+            <button class="fbtn3" style="font-style: italic;"><a href="#">50 mL</a></button>
+            <button class="fbtn3b" style="font-style: italic;"><a href="#">100 mL</a></button>
           </div>
         </div>
+        <button class="fbtn4 mr mt2"><a href="#">Add to bag</a></button>
       </div>
-    </section>
-  </div>
-  <div class="registration">
-    <h2>Login</h2>
-    <form id="regForm" >
-      <div class="email2 mb">
-        <input type="text" placeholder="Email address" id="email" size="60">
-        <p id="errEmail" class="hide">Please enter an email</p>
+      <div class="grid-item">
+        <div class="img-wrapper mr">
+          <img class="front" src="https://glossier-prod.imgix.net/files/glossier-you-travelspray-carousel-01.png?auto=compress,format&cs=srgb&w={width}" alt="img7">
+          <img class="back" src="https://glossier-prod.imgix.net/files/glossier-you-travelspray-carousel-02.png?auto=compress,format&cs=srgb&w={width}" alt="img8">
+        </div>
+        <div class="new">
+          <p>NEW SIZE</p>
+        </div>
+        <div class="cont-info">
+          <p>Glossier You</p>
+          <p class="c">Eau de parfum travel spray</p>
+          <p class="cb" style="display: none;
+          font-style: italic;">8 mL</p>
+          <h6>&#8358;52,900</h6>
+          <div class="info-btn flex">
+            <button class="fbtn3" style="font-style: italic;"><a href="#">8 mL</a></button>
+          </div>
+        </div>
+        <button class="fbtn4 mr mt2"><a href="#">Add to bag</a></button>
       </div>
-      <div class="password mb">
-        <input type="password" placeholder="Password" id="password" size="60">
-        <p id="errPass" class="hide">Please enter a password</p>
+      <div class="grid-item">
+        <div class="img-wrapper mr">
+          <img class="front" src="https://glossier-prod.imgix.net/files/glossier-candle-you-carousel-01_8f3ee16e-d330-44ca-9fe3-05c002c16c6b.png?auto=compress,format&cs=srgb&w={width}" alt="img3">
+          <img class="back" src="https://glossier-prod.imgix.net/files/glossier-candle-you-carousel-03_f9e3b819-d7c7-42f5-9cb4-47ba8bc00992.png?w=459&auto=compress,format&cs=srgb" alt="img4">
+        </div>
+        <div class="cont-info">
+          <p>Glossier Candles</p>
+          <p class="c">Scented candles</p>
+          <p class="cb" style="display: none;">Glossier You</p>
+          <h6>&#8358;74,300</h6>
+        </div>
+        <div class="color-grid flex">
+          <div>
+            <p class="brown"></p>
+          </div>
+            <p class="lightb"></p>
+            <p class="lightg"></p>
+        </div>
+        <button class="fbtn4 mr mt2"><a href="#">Add to bag</a></button>
       </div>
-      <p class="mb" style="color: black;
-      border-bottom: 1px solid black;
-      display: inline-flex;">Forgot your password?</p>
-      
-      <div class="info-btn flex mt3">
-        <button class="fbtn3 mr"><a href="#">Sign in</a></button>
-        <button class="fbtn3b"><a href="register.html">Create an account</a></button>
+      <div class="grid-item">
+        <div class="img-wrapper mr">
+          <img class="front" src="https://glossier-prod.imgix.net/products/glossier-you-solid-carousel-01_0a1d59e5-c4e8-4d18-b59d-4482a0f4c1f5.png?auto=compress,format&cs=srgb&w={width}" alt="img5">
+          <img class="back" src="https://glossier-prod.imgix.net/products/glossier-you-solid-carousel-02.png?auto=compress,format&cs=srgb&w={width}" alt="img6">
+        </div>
+        <div class="cont-info">
+          <p>Bandana</p>
+          <p class="c">Perfume solid</p>
+          <p class="cb" style="display: none;">Perfume solid</p>
+          <h6>&#8358;57,800</h6>
+        </div>
+        <button class="fbtn4 mr mt3"><a href="#">Add to bag</a></button>
       </div>
-    </form>
-  </div>
-  
-  
+      <div class="grid-item">
+        <div class="img-wrapper mr">
+          <img class="front" src="https://glossier-prod.imgix.net/products/glossier-you-solidrefill-carousel-01.png?auto=compress,format&cs=srgb&w={width}" alt="img9">
+          <img class="back" src="https://glossier-prod.imgix.net/products/glossier-you-solidrefill-carousel-02.png?auto=compress,format&cs=srgb&w={width}" alt="img10">
+        </div>
+        <div class="cont-info">
+          <p>Glossier You Solid Refill</p>
+          <p class="c">Solid perfume refill</p>
+          <p class="cb" style="display: none;">Solid perfume refill</p>
+          <h6>&#8358;41,300</h6>
+        </div>
+        <button class="fbtn4 mr mt2"><a href="#">Add to bag</a></button>
+      </div>
+    </div> 
+  </div> 
   
   <footer>
     <div class="footer-top flex justify-btw">
@@ -339,7 +319,7 @@
   </footer> 
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
-  <script src="script/login.js"></script>
+  <script src="script/product.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <script src="./js/nav.js"></script>
 </body>

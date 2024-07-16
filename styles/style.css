@@ -34,7 +34,7 @@ header a, span{
   position: relative;
   width: 100%;
   height: 645px; 
-  background-image: url('./image/glossier-homepage-complexion-desktop.avif');
+  background-image: url('../image/glossier-homepage-complexion-desktop.avif');
   background-position: top 20px center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -148,7 +148,7 @@ header a, span{
 .img1{
   width: 100%;
   height: 700px;
-  background-image: url('./image/glossier-homepage-complexion-img1.avif');
+  background-image: url('../image/glossier-homepage-complexion-img1.avif');
   background-size: cover;
   background-position: bottom 5px center;
   background-repeat: no-repeat;
@@ -157,7 +157,7 @@ header a, span{
 .img2{
   width: 100%;
   height: 700px;
-  background-image: url('./image/glossier-homepage-complexion-img2.avif');
+  background-image: url('../image/glossier-homepage-complexion-img2.avif');
   background-size: cover;
   background-position: bottom 5px center;
   background-repeat: no-repeat;
