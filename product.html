@@ -5,8 +5,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="./style/shared.css" />
-    <link rel="stylesheet" href="./style/product.css" />
+    <link rel="stylesheet" href="./styles/shared.css" />
+    <link rel="stylesheet" href="./styles/productPage.css" />
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script
       src="https://kit.fontawesome.com/4c9b763486.js"
       crossorigin="anonymous"
@@ -19,7 +38,7 @@
           <a href="index.html" class="flex column"
             ><img src="./images/logo.png" alt="" class="logo" />
           </a>
-          <p class="hideText">you look good.</p>
+          <!-- <p class="hideText">you look good.</p> -->
         </div>
         <ul>
           <li>skincare</li>
@@ -71,7 +90,9 @@
       <section class="cartModal">
         <div class="sideCart">
           <div class="sideCart_top flex justify-between">
-            <a href="index.html" class="cartLogo flex justify-center align-center"
+            <a
+              href="index.html"
+              class="cartLogo flex justify-center align-center"
               ><img src="./images/logo.png" alt="" />
             </a>
             <ul class="flex align-center" style="gap: 50px">
@@ -136,7 +157,12 @@
                 <p>Estimated total</p>
                 <p>₦39,700</p>
               </div>
-              <a class="btn btn-tertiary" href="./checkout.html" style="display:inline-block">checkout</a>
+              <a
+                class="butn btn-tert"
+                href="./checkout.html"
+                style="display: inline-block"
+                >checkout</a
+              >
               <p style="font-size: 12px; color: #666; margin-top: 10px">
                 By checking out, you agree to our Terms of Use and Privacy
                 Policy.
@@ -163,7 +189,7 @@
         </div>
         <div class="btnContainer">
           <span class="tag">New</span>
-          <button class="btn btn-secondary">Add to bag #39,000</button>
+          <button class="butn btn-sec">Add to bag #39,000</button>
         </div>
         <div class="description">
           <p>
@@ -198,13 +224,211 @@
         </div>
       </div>
     </div>
+    <div class="info-btn flex justify-btw mb">
+      <div class="info3 ml">SHOP MORE GLOSSIER FAVORITES</div>
+      <button class="fbtn3 mr"><a href="#">Shop all products</a></button>
+    </div>
+    <div class="fcontainer3">
+      <div class="fcont-grid3">
+        <div class="grid-item">
+          <div class="img-wrapper mr">
+            <img
+              class="front"
+              src="https://glossier-prod.imgix.net/files/glossier-summer-capsule-towel-carousel-01.png?auto=compress,format&cs=srgb&w=360"
+              alt="img"
+            />
+            <img
+              class="back"
+              src="https://glossier-prod.imgix.net/files/glossier-summer-capsule-towel-carousel-02.png?auto=compress,format&cs=srgb&w=360"
+              alt="img2"
+            />
+          </div>
+          <div class="new">
+            <p>NEW</p>
+          </div>
+          <div class="cont-info">
+            <p>Towel</p>
+            <p class="c">Summer Capsule Collection</p>
+            <h6>&#8358;69,400</h6>
+          </div>
+          <button class="fbtn4 mr mt"><a href="#">Add to bag</a></button>
+        </div>
+        <div class="grid-item">
+          <div class="img-wrapper mr">
+            <img
+              class="front"
+              src="https://glossier-prod.imgix.net/files/glossier-summer-capsule-utility-sling-carousel-01.png?auto=compress,format&cs=srgb&w=360"
+              alt="img3"
+            />
+            <img
+              class="back"
+              src="https://glossier-prod.imgix.net/files/glossier-summer-capsule-utility-sling-carousel-02.png?auto=compress,format&cs=srgb&w=360"
+              alt="img4"
+            />
+          </div>
+          <div class="new">
+            <p>NEW</p>
+          </div>
+          <div class="cont-info">
+            <p>Utility Sling</p>
+            <p class="c">Summer Capsule Collection</p>
+            <h6>&#8358;39,700</h6>
+          </div>
+          <button class="fbtn4 mr mt"><a href="#">Add to bag</a></button>
+        </div>
+        <div class="grid-item">
+          <div class="img-wrapper mr">
+            <img
+              class="front"
+              src="https://glossier-prod.imgix.net/files/glossier-summer-capsule-bandana-carousel-01.png?auto=compress,format&cs=srgb&w=360"
+              alt="img5"
+            />
+            <img
+              class="back"
+              src="https://glossier-prod.imgix.net/files/glossier-summer-capsule-bandana-carousel-02.png?auto=compress,format&cs=srgb&w=360"
+              alt="img6"
+            />
+          </div>
+          <div class="new">
+            <p>NEW</p>
+          </div>
+          <div class="cont-info">
+            <p>Bandana</p>
+            <p class="c">Summer Capsule Collection</p>
+            <h6>&#8358;36,500</h6>
+          </div>
+          <button class="fbtn4 mr mt"><a href="#">Add to bag</a></button>
+        </div>
+        <div class="grid-item">
+          <div class="img-wrapper mr">
+            <img
+              class="front"
+              src="https://glossier-prod.imgix.net/files/glossier-summer-capsule-le-ultralip-deco-carousel-01.png?auto=compress,format&cs=srgb&w=360"
+              alt="img7"
+            />
+            <img
+              class="back"
+              src="https://glossier-prod.imgix.net/files/glossier-summer-capsulele-deco-carousel-02.png?w=459&auto=compress,format&cs=srgb"
+              alt="img8"
+            />
+          </div>
+          <div class="new">
+            <p>NEW</p>
+          </div>
+          <div class="cont-info">
+            <p>Limited Edition Ultralip</p>
+            <p class="c">Summer Capsule Collection</p>
+            <h6>&#8358;36,400</h6>
+          </div>
+          <div class="color-grid flex mb3">
+            <div>
+              <p class="brown"></p>
+            </div>
+            <p class="lightb"></p>
+          </div>
+          <button class="fbtn4 mr"><a href="#">Add to bag</a></button>
+        </div>
+        <div class="grid-item">
+          <div class="img-wrapper mr">
+            <img
+              class="front"
+              src="https://glossier-prod.imgix.net/files/glossier-summer-capsule-ultralip-set-carousel-01.png?auto=compress,format&cs=srgb&w=360"
+              alt="img9"
+            />
+            <img
+              class="back"
+              src="https://glossier-prod.imgix.net/files/glossier-summer-capsulele-deco-carousel-02.png?w=459&auto=compress,format&cs=srgb"
+              alt="img10"
+            />
+          </div>
+          <div class="new">
+            <p>NEW</p>
+          </div>
+          <div class="cont-info">
+            <p>Summer Ultralip Duo</p>
+            <p class="c">Limited edition</p>
+            <h6>&#8358;66,100 <span class="td">NGN72,700</span></h6>
+          </div>
+          <button class="fbtn4 mr mt"><a href="#">Choose set</a></button>
+        </div>
+        <div class="grid-item">
+          <div class="img-wrapper mr">
+            <img
+              class="front"
+              src="https://glossier-prod.imgix.net/files/glossier-summer-capsule-comb-carousel-01.png?auto=compress,format&cs=srgb&w=360"
+              alt="img11"
+            />
+            <img
+              class="back"
+              src="https://glossier-prod.imgix.net/files/glossier-summer-capsule-comb-carousel-02.png?auto=compress,format&cs=srgb&w=360"
+              alt="img12"
+            />
+          </div>
+          <div class="new">
+            <p>NEW</p>
+          </div>
+          <div class="cont-info">
+            <p>Hair Comb</p>
+            <p class="c">Summer Capsule Collection</p>
+            <h6>&#8358;56,200</h6>
+          </div>
+          <button class="fbtn4 mr mt"><a href="#">Add to bag</a></button>
+        </div>
+        <div class="grid-item">
+          <div class="img-wrapper mr">
+            <img
+              class="front"
+              src="https://glossier-prod.imgix.net/files/glossier-summer-hairclip-carousel-01.png?auto=compress,format&cs=srgb&w=360"
+              alt="img13"
+            />
+            <img
+              class="back"
+              src="https://glossier-prod.imgix.net/files/glossier-summer-capsule-hairclip-carousel-02.png?auto=compress,format&cs=srgb&w=360"
+              alt="img14"
+            />
+          </div>
+          <div class="new">
+            <p>NEW</p>
+          </div>
+          <div class="cont-info">
+            <p>Claw Clip</p>
+            <p class="c">Summer Capsule Collection</p>
+            <h6>&#8358;56,200</h6>
+          </div>
+          <button class="fbtn4 mr mt"><a href="#">Add to bag</a></button>
+        </div>
+        <div class="grid-item">
+          <div class="img-wrapper mr">
+            <img
+              class="front"
+              src="https://glossier-prod.imgix.net/files/glossier-summer-capsule-dufflebag-deo-carousel-01.png?auto=compress,format&cs=srgb&w=360"
+              alt="img15"
+            />
+            <img
+              class="back"
+              src="https://glossier-prod.imgix.net/files/glossier-summer-capsule-dufflebag-deo-carousel-02.png?auto=compress,format&cs=srgb&w=360"
+              alt="img16"
+            />
+          </div>
+          <div class="new">
+            <p>NEW</p>
+          </div>
+          <div class="cont-info">
+            <p>Workout Duo</p>
+            <p class="c">Summer Capsule Collection</p>
+            <h6>&#8358;128,800</h6>
+          </div>
+          <button class="fbtn4 mr mt"><a href="#">Add to bag</a></button>
+        </div>
+      </div>
+    </div>
     <div class="reviewContainer">
       <div
         class="flex justify-between align-center"
         style="margin-bottom: 20px"
       >
         <p>Review</p>
-        <button class="btn btn-primary reviewBtn">Write a review</button>
+        <button class="butn btn-prim reviewBtn" style="width: 15%;">Write a review</button>
       </div>
       <div class="grid reviewCard">
         <div class="flex">
@@ -270,7 +494,185 @@
         </div>
       </div>
     </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="./js/nav.js"></script>
+
+    <footer>
+      <div class="footer-top flex justify-btw">
+        <p class="top-msg">
+          At Glossier, we make products inspired by real life, embracing the
+          ethos of Skin First. Makeup<br />
+          Second™. We believe beauty is about having fun, celebrating freedom,
+          and being present. No<br />
+          matter where you are in your beauty journey, you look good.
+        </p>
+        <div class="email">
+          <input type="email" placeholder="Email Address" id="email" />
+          <p id="err-msg" class="mb2">This field is required</p>
+          <p>
+            You can unsubscribe anytime. For more details, review our
+            <span class="privacy-policy">Privacy Policy</span>
+          </p>
+        </div>
+        <button type="submit" id="subBtn">Submit</button>
+      </div>
+      <div class="footer-middle">
+        <div class="footer-grid">
+          <p>HOW CAN WE HELP?</p>
+          <ul>
+            <li><a href="#" style="text-decoration: underline">Contact</a></li>
+            <li><a href="#">Returns & exchanges</a></li>
+            <li><a href="#">Help & FAQ</a></li>
+            <li><a href="#">International</a></li>
+            <li><a href="#">Responsible disclosure</a></li>
+          </ul>
+        </div>
+        <div class="footer-grid">
+          <p>ABOUT GLOSSIER</p>
+          <ul>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Affiliates</a></li>
+            <li><a href="#">Company Blog</a></li>
+            <li><a href="#">Glossier for Good</a></li>
+            <li><a href="#">Glossier Grant Program</a></li>
+          </ul>
+        </div>
+        <div class="footer-grid">
+          <p>STORES</p>
+          <ul>
+            <li><a href="#">Find your store</a></li>
+          </ul>
+        </div>
+        <div class="footer-grid">
+          <p>SOCIAL</p>
+          <ul>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">Pinterest</a></li>
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">Twitter</a></li>
+            <li><a href="#">Youtube</a></li>
+            <li><a href="#">TikTok</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-middle" style="gap: 65px">
+        <div class="footer-grid">
+          <ul>
+            <li><a href="#">A</a></li>
+            <li><a href="#">After Baume</a></li>
+            <li><a href="#">B</a></li>
+            <li><a href="#">Balm Dotcom</a></li>
+            <li><a href="#">Body Hero Exfoliating Bar</a></li>
+            <li><a href="#">Body Hero Daily Oil Wash</a></li>
+            <li><a href="#">Body Hero Daily Perfecting Lotion</a></li>
+            <li><a href="#">Body Hero Dry-Touch Oil Mist</a></li>
+            <li><a href="#">Boy Brow</a></li>
+            <li><a href="#">Brow Flick</a></li>
+            <li><a href="#">C</a></li>
+            <li><a href="#">Cleanser Concentrate</a></li>
+            <li><a href="#">Cloud Paint</a></li>
+            <li><a href="#">D</a></li>
+            <li><a href="#">Deodorant</a></li>
+            <li><a href="#">Deodorant Refill Stick</a></li>
+            <li><a href="#">Duffle Bag</a></li>
+            <li><a href="#">E</a></li>
+          </ul>
+        </div>
+        <div class="footer-grid">
+          <ul>
+            <li><a href="#">Embroidered Sage Hoodie</a></li>
+            <li><a href="#">Eyeshadow Brush</a></li>
+            <li><a href="#">F</a></li>
+            <li><a href="#">Field Greens Blanket</a></li>
+            <li><a href="#">Full Orbit</a></li>
+            <li><a href="#">Futuredew</a></li>
+            <li><a href="#">G</a></li>
+            <li><a href="#">G Suit</a></li>
+            <li><a href="#">Generation G</a></li>
+            <li><a href="#">Glossier Candles</a></li>
+            <li><a href="#">Glossier Sweatshirt</a></li>
+            <li><a href="#">Glossier You</a></li>
+            <li><a href="#">Glossier You Travel Spray</a></li>
+            <li><a href="#">Glossier You Solid</a></li>
+            <li><a href="#">Glossier You Solid Refill</a></li>
+            <li><a href="#">Glossier Utility Bag</a></li>
+            <li><a href="#">H</a></li>
+            <li><a href="#">Haloscope</a></li>
+          </ul>
+        </div>
+        <div class="footer-grid">
+          <ul>
+            <li><a href="#">Hand Cream</a></li>
+            <li><a href="#">I</a></li>
+            <li><a href="#">Invisible Shield SPF50</a></li>
+            <li><a href="#">Invisible Shield SPF35</a></li>
+            <li><a href="#">J</a></li>
+            <li><a href="#">K</a></li>
+            <li><a href="#">L</a></li>
+            <li><a href="#">Lash Slick</a></li>
+            <li><a href="#">Lip Line</a></li>
+            <li><a href="#">Lidstar</a></li>
+            <li><a href="#">Limited Edition Embroidered Cream Hoodie</a></li>
+            <li><a href="#">Lip Gloss</a></li>
+            <li><a href="#">M</a></li>
+            <li><a href="#">Milky Jelly Cleanser</a></li>
+            <li><a href="#">Milky Jelly Cleansing Bar</a></li>
+            <li><a href="#">Milky Oil</a></li>
+            <li><a href="#">Monochromes</a></li>
+            <li><a href="#">Monochromes Refill</a></li>
+          </ul>
+        </div>
+        <div class="footer-grid">
+          <ul>
+            <li><a href="#">N</a></li>
+            <li><a href="#">No. 1 Pencil</a></li>
+            <li><a href="#">O</a></li>
+            <li><a href="#">P</a></li>
+            <li><a href="#">Perfecting Skin Tint</a></li>
+            <li><a href="#">Priming Moisturizer</a></li>
+            <li><a href="#">Priming Moisturizer Balance</a></li>
+            <li><a href="#">Priming Moisturizer Rich</a></li>
+            <li><a href="#">Pro Tip</a></li>
+            <li><a href="#">Q</a></li>
+            <li><a href="#">R</a></li>
+            <li><a href="#">S</a></li>
+            <li><a href="#">Skywash</a></li>
+            <li><a href="#">Solution</a></li>
+            <li><a href="#">Stretch Fluid Foundation</a></li>
+            <li><a href="#">Stretch Balm Concealer</a></li>
+            <li><a href="#">Stretch Face Brush</a></li>
+            <li><a href="#">Super Bounce</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom flex mb2">
+        <div class="glossier-rights flex mb2">
+          <p style="margin-bottom: 0">
+            &copy; 2024 Glossier. All rights reserved.
+          </p>
+          <a href="#">Privacy Policy</a>
+          <a href="#">US State Privacy Notice</a>
+          <a href="#">Terms of Use</a>
+        </div>
+
+        <div class="characters">
+          <img
+            src="https://glossier-prod.imgix.net/files/smile_wave_black_lg.png?auto=compress,format&cs=srgb&w=720"
+            alt="img19"
+          />
+          <!-- <div class="chatbox">
+          <i class="fa-solid fa-comment"></i>
+        </div> -->
+        </div>
+      </div>
+      <div class="glossier-rights flex">
+        <a href="#">Accessibility</a>
+        <a href="#">Supply Chain Transparency</a>
+        <a href="#" style="font-size: 16px">Cookie Preferences</a>
+      </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+    <script src="script/script.js"></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> -->
+    <script src="./script/nav.js"></script>
   </body>
 </html>
