@@ -14,14 +14,14 @@ $('.fbtn3b').click(function(){
   resetFormState(); // Reset form state before navigating
   window.location.href = 'register.html'
 });
-
+let user = JSON.parse(localStorage.getItem("formData"));
+  console.log(user);
 
 // The submit event handler for #regForm remains intact, performing the form validation and submission logic
 $('#regForm').on('submit', function(event){
   event.preventDefault();
 
-  let user = JSON.parse(localStorage.getItem("formData"));
-  console.log(user);
+  
 
   // Get the values of the input fields
   const email = $('#email').val();
@@ -43,7 +43,7 @@ $('#regForm').on('submit', function(event){
   }
 
    // Check username and password
-   if (valid && (username !== user.email || password !== user.password)) {
+   if (valid && (email !== user.email || password !== user.password)) {
     valid = false;
    $('#errEmail').show();
    $('#errPass').show();
