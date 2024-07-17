@@ -11,15 +11,159 @@
   <script src="https://kit.fontawesome.com/4c9b763486.js"crossorigin="anonymous"
   ></script>
   <link rel="stylesheet" href="styles/product.css">
+  <link rel="stylesheet" href="styles/shared.css">
  
  
   <title>Fragrance-Glossier</title>
 </head>
 <body>
-  <header>
-    <span> <a href="#">limited edition balm quintet:</a> 5 flavors + sticker sheet!</span>
-  </header>
   <!--insert nav here-->
+  <div class="nav">
+    <header>
+      <span>
+        <a href="#">limited edition balm quintet:</a> 5 flavors + sticker
+        sheet!</span
+      >
+    </header>
+    <nav>
+      <div class="logoContainer">
+        <a href="index.html" class="flex column justify-center align-center"
+          ><img src="./images/logo.png" alt="" class="logo" />
+        </a>
+        <p class="hideText">you look good.</p>
+      </div>
+      <ul>
+        <li>skincare</li>
+        <li>makeup</li>
+        <li>balms</li>
+        <li>body</li>
+        <li id="fragrance">fragrance</li>
+        <li>glossier goods</li>
+        <li>sets</li>
+      </ul>
+      <ul>
+        <li><i class="fa-solid fa-globe" style="margin-right: 5px"></i>Ng</li>
+        <li>search</li>
+        <li>stores</li>
+        <li>log in</li>
+        <li id="bag">bag</li>
+      </ul>
+    </nav>
+    <section class="fragrance">
+      <!-- <div class="flex" style="gap: 100px"> -->
+      <div>
+        <ul>
+          <li><a href="products.html">Shop All</a></li>
+          <li>Bestsellers</li>
+        </ul>
+        <div style="margin-top: 30px">
+          <p style="color: #0600ff; margin-bottom: 10px">New</p>
+          <ul>
+            <li>Limited Edition Summer Collection</li>
+            <li>Lip Line</li>
+            <li>Balm Dotcom Original Formula</li>
+          </ul>
+        </div>
+      </div>
+      <ul>
+        <li>Glossier You</li>
+        <li>Glossier You Travel Spray</li>
+        <li>All fragrance</li>
+      </ul>
+      <!-- </div> -->
+      <div class="fragranceImg">
+        <img src="./images/fragranceNav.avif" alt="" />
+        <div class="flex justify-between align-center">
+          <button class="btn-link">Shop all fragrance</button>
+          <i class="fa-solid fa-arrow-right"></i>
+        </div>
+      </div>
+    </section>
+    <section class="cartModal">
+      <div class="sideCart">
+        <div class="sideCart_top flex justify-between">
+          <a
+            href="index.html"
+            class="cartLogo flex justify-center align-center"
+            ><img src="./images/logo.png" alt="" />
+          </a>
+          <ul class="flex align-center" style="gap: 50px">
+            <li>Bag</li>
+            <li id="close"><i class="fa-solid fa-xmark"></i></li>
+          </ul>
+        </div>
+
+        <div class="sideCart_bottom flex justify-between column">
+          <div class="">
+            <h4>Shopping bag</h4>
+            <p class="freeShipping">
+              ₦105,910 away from free express shipping
+            </p>
+
+            <div class="cartCard">
+              <div class="cartImage">
+                <img src="./images/cartItem-1.avif" alt="" />
+              </div>
+              <div class="cartCard_right flex column justify-between">
+                <div class="cartCard_top flex justify-between">
+                  <p>Utility Sling</p>
+                  <p>₦39,700</p>
+                </div>
+                <div class="cartCard_bottom flex justify-between">
+                  <div class="count">1</div>
+                  <button class="btn-remove">remove</button>
+                </div>
+              </div>
+            </div>
+            <div
+              class="flex justify-between padding-10"
+              style="background-color: #f0f0f0"
+            >
+              <p>Subtotal</p>
+              <p>₦39,700</p>
+            </div>
+            <div
+              class="flex justify-between padding-10"
+              style="background-color: #f7f7f7"
+            >
+              <p>Tax calculated in checkout</p>
+              <p>₦39,700</p>
+            </div>
+            <p
+              class="padding-10"
+              style="
+                font-size: 12px;
+                color: #666;
+                letter-spacing: 0.5px;
+                line-height: 15px;
+              "
+            >
+              Shipping and promotions calculated in checkout. <br /><br />
+              Sales tax amount shown in checkout is a best estimate and may
+              differ from amount actually charged and shown on Order
+              Confirmation email.
+            </p>
+          </div>
+          <div class="cartButton padding-10">
+            <div class="flex justify-between" style="margin-bottom: 10px">
+              <p>Estimated total</p>
+              <p>₦39,700</p>
+            </div>
+            <a
+              class="btn btn-tertiary"
+              href="./checkout.html"
+              style="display: inline-block"
+              >checkout</a
+            >
+            <p style="font-size: 12px; color: #666; margin-top: 10px">
+              By checking out, you agree to our Terms of Use and Privacy
+              Policy.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
   <div class="fnav">insert nav here</div>
   <div class="mini-nav flex justify-btw">
     <div class="left-side">
@@ -672,7 +816,7 @@
   </footer> 
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
-  <script src="script/product.js"></script>
+  <script src="script/products.js"></script>
  
 </body>
 </html>

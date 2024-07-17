@@ -9,12 +9,6 @@ $(document).ready(function(){
     validateInput($(this));
   });
 
-  // switch to login page
-  $('.fbtn3b').click(function(){
-    // Reset form state before navigating
-    resetForm();
-    window.location.href = 'login.html'
-  });
 
   // number checkbox visibility and validation
   $('#tick3').click(function(){

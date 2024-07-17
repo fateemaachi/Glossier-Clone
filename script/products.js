@@ -14,7 +14,9 @@ $(document).ready(function(){
       $(this).find('.c').show()
     }
   );
-
+  $('.grid-item').click(function(){
+    location.href = "product.html"
+  })
   $('#show').click(function(){
     $('.options').toggle()
   });
