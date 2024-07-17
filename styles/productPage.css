@@ -269,3 +269,6 @@ input {
   border-color: #000;
   animation: border-dots 2s infinite linear;
 }
+a{
+  text-decoration: none;
+}
