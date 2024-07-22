@@ -10,10 +10,12 @@ $('#email, #password').on('blur', function() {
 });
 
 // switch to registration page
-$('.fbtn3b').click(function(){
-  resetFormState(); // Reset form state before navigating
-  window.location.href = 'register.html'
-});
+
+// $('.fbtn3b').click(function(){
+//   resetFormState(); // Reset form state before navigating
+//   window.location.href = 'register.html'
+// });
+
 let user = JSON.parse(localStorage.getItem("formData"));
   console.log(user);
 

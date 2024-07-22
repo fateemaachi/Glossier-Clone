@@ -13,18 +13,21 @@
   <script src="https://kit.fontawesome.com/4c9b763486.js"crossorigin="anonymous"
   ></script>
   <link rel="stylesheet" href="styles/login.css">
-  <link rel="stylesheet" href="./style/shared.css" />
+  <link rel="stylesheet" href="styles/shared.css" />
   <title>Account-Glossier</title>
 </head>
 <body>
-  <header>
-    <span> <a href="#">limited edition balm quintet:</a> 5 flavors + sticker sheet!</span>
-  </header>
-  <!--insert nav here-->
+   <!--insert nav here-->
   <div class="nav">
+    <header>
+      <span>
+        <a href="#">limited edition balm quintet:</a> 5 flavors + sticker
+        sheet!</span
+      >
+    </header>
     <nav>
       <div class="logoContainer">
-        <a href="index.html" class="flex column"
+        <a href="index.html" class="flex column justify-center align-center"
           ><img src="./images/logo.png" alt="" class="logo" />
         </a>
         <p class="hideText">you look good.</p>
@@ -50,7 +53,7 @@
       <!-- <div class="flex" style="gap: 100px"> -->
       <div>
         <ul>
-          <li>Shop All</li>
+          <li><a href="products.html">Shop All</a></li>
           <li>Bestsellers</li>
         </ul>
         <div style="margin-top: 30px">
@@ -79,8 +82,10 @@
     <section class="cartModal">
       <div class="sideCart">
         <div class="sideCart_top flex justify-between">
-          <a href="index.html"
-            ><img src="./images/logo.png" alt="" class="logo" />
+          <a
+            href="index.html"
+            class="cartLogo flex justify-center align-center"
+            ><img src="./images/logo.png" alt="" />
           </a>
           <ul class="flex align-center" style="gap: 50px">
             <li>Bag</li>
@@ -144,7 +149,12 @@
               <p>Estimated total</p>
               <p>₦39,700</p>
             </div>
-            <button class="btn btn-tertiary">checkout</button>
+            <a
+              class="btn btn-tertiary"
+              href="./checkout.html"
+              style="display: inline-block"
+              >checkout</a
+            >
             <p style="font-size: 12px; color: #666; margin-top: 10px">
               By checking out, you agree to our Terms of Use and Privacy
               Policy.
@@ -171,7 +181,7 @@
       
       <div class="info-btn flex mt3">
         <button class="fbtn3 mr"><a href="#">Sign in</a></button>
-        <button class="fbtn3b"><a href="register.html">Create an account</a></button>
+        <a class="fbtn3b" href="register.html" >Create an account</a>
       </div>
     </form>
   </div>
@@ -341,6 +351,6 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
   <script src="script/login.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-  <script src="./js/nav.js"></script>
+  <script src="script/nav.js"></script>
 </body>
 </html>

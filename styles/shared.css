@@ -72,6 +72,9 @@ ul {
 ul li {
   width: fit-content;
 }
+ul li a{
+  color: black;
+}
 nav ul {
   display: flex;
   gap: 10px;
@@ -231,7 +234,6 @@ footer{
   line-height: 1.5;
 }
 input{
-  width: 520px;
   padding: 15px 10px;
   margin-bottom: 10px;
   outline: none;

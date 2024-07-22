@@ -35,7 +35,7 @@ header a, span{
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 40px;
+  padding-top: 120px;
 }
 .registration h2{
   margin-bottom: 30px;
@@ -122,6 +122,9 @@ input[type="checkbox"]{
   padding: 0 15px;
 }
 .fbtn3b {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 41px;
   background: none;
   border-top: none;
@@ -131,6 +134,7 @@ input[type="checkbox"]{
   position: relative;
   overflow: hidden;
   padding: 0 15px;
+  color: black;
 }
 .fbtn3 a, .fbtn3b a {
   text-decoration: none;

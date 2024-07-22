@@ -40,6 +40,7 @@ header a, span{
   background-size: cover;
   background-repeat: no-repeat;
   cursor: pointer;
+  padding-top: 40px;
 }
 .fshopnow{
   width: 26%;
@@ -106,14 +107,14 @@ header a, span{
 .fglossier{
   width: 100%;
   position: absolute;
-  bottom: -95px;
+  bottom: -87px;
   right: 22px;
-}
-.fglossier h1{
+  counter-reset: red;
   font-style: italic;
   font-size: 372px;
   color: #fff;
 }
+
 .fcontainer2{
   width: 100%;
   margin-top: 100px;
