@@ -77,7 +77,6 @@ $(document).ready(function () {
       item.itemCount++;
       localStorage.setItem('cart', JSON.stringify(cart))
       displayCart()
-      alert('item added to cart')
     }
    })
 

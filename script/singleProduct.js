@@ -63,7 +63,10 @@ $(document).ready(function () {
     localStorage.setItem('cart', JSON.stringify(cart))
   } else {const newProduct = {...product, itemCount: 1};
   cart.push(newProduct);
-  localStorage.setItem('cart', JSON.stringify(cart))}
+  localStorage.setItem('cart', JSON.stringify(cart))
+  alert('item added to cart')
+}
+  
   
  })
 
