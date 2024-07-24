@@ -46,16 +46,7 @@ $(document).ready(function () {
     })
   }
   // displayProducts()
-
-  const loginBtn = $('#login');
-  const logoutBtn= $('#logout');
-  if(user){
-    loginBtn.hide();
-    logoutBtn.show();
-  }
-
-
-
+ 
   $(".fcont-grid3").slick({
     infinite: true,
     slidesToShow: 4,

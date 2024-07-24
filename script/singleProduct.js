@@ -8,7 +8,11 @@ $(document).ready(function () {
   let reviews = []
   const cart =JSON.parse(localStorage.getItem('cart')) || []
 
-  
+  if(user) {
+    $('#reviewParent').show().css('display', 'flex')
+  } else {
+    $('#reviewParent').hide()
+  }
 
   $.ajax({
     url: `${baseUrl}/products/${id}`,
@@ -53,8 +57,14 @@ $(document).ready(function () {
   
  }
  $(document).on('click', '.addToBag', function(){
-  cart.push(product);
-  localStorage.setItem('cart', JSON.stringify(cart))
+  const itemExists = cart.find(item => item.id === product.id);
+  if(itemExists){
+    itemExists.itemCount++;
+    localStorage.setItem('cart', JSON.stringify(cart))
+  } else {const newProduct = {...product, itemCount: 1};
+  cart.push(newProduct);
+  localStorage.setItem('cart', JSON.stringify(cart))}
+  
  })
 
  $(document).on('click','.reviewBtn', function (){

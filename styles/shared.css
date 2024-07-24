@@ -126,6 +126,7 @@ nav ul {
   height: 100vh;
   display: grid;
   grid-template-rows: 40px 1fr;
+  overflow: scroll;
 }
 .sideCart h3 {
   font-weight: 400;
@@ -146,6 +147,10 @@ nav ul {
 }
 .sideCart_top ul li:hover {
   border: none;
+}
+.cartCont {
+  max-height: 50%;
+  overflow-y: scroll;
 }
 .cartLogo img {
   width: 80px;

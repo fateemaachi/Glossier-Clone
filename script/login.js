@@ -54,7 +54,9 @@ $(document).ready(function () {
         method: "POST",
         data: { email: email, password: password },
         success: function (response) {
-          localStorage.setItem("formData", JSON.stringify(response));
+          let userDetails = response;
+          userDetails.isLoggedIn = true;
+          localStorage.setItem("formData", JSON.stringify(userDetails));
           alert("Login successful");
           window.location.href = "index.html";
         },

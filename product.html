@@ -56,8 +56,9 @@
           <li><i class="fa-solid fa-globe" style="margin-right: 5px"></i>Ng</li>
           <li>search</li>
           <li>stores</li>
-          <li><a href="login.html">log in</a></li>
-          <li id="bag">bag</li>
+          <li id="login"><a href="login.html">log in</a></li>
+          <li id="logout">log out</li>
+          <li id="bag">Bag (<span class="bagCount" style="color: black;"></span>)</li>
         </ul>
       </nav>
       <section class="fragrance">
@@ -99,7 +100,7 @@
               ><img src="./images/logo.png" alt="" />
             </a>
             <ul class="flex align-center" style="gap: 50px">
-              <li>Bag</li>
+              <li id="bag" style="margin-top: -4px;">Bag (<span class="bagCount" style="color: black;"></span>)</li>
               <li id="close"><i class="fa-solid fa-xmark"></i></li>
             </ul>
           </div>
@@ -409,7 +410,7 @@
             <p>Average rating</p>
           </div>
         </div>
-        <div class="flex justify-between">
+        <div class=" justify-between hide" id="reviewParent">
           <input  id='review' type="text" placeholder="Write a review" />
           <button class="butn btn-prim reviewBtn" style="width: 15%">
             Write a review
@@ -421,41 +422,7 @@
         </div>
       </div>
       <div class="grid reviewCard reviews">
-        <div>
-          <div class="flex column">
-            <p>11.07.24</p>
-            <p>Shyanna S.</p>
-          </div>
-        </div>
-        <div>
-          <div class="flex column">
-            <div
-              class="flex align-center"
-              style="font-size: 10px; margin-bottom: 10px"
-            >
-              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
-              ><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
-              ><i class="fa-solid fa-star"></i>
-            </div>
-            <p>
-              THE BEST <br /><br />
-              I’m a bartender always losing my bottle opener so this helps so
-              good and I put one arm through it so it’s not in my way!
-              Recommended to all of my bar friends
-            </p>
-            <button class="btn-remove" style="margin-top: 10px">
-              Show more
-            </button>
-          </div>
-        </div>
-        <div class="flex rateContainer">
-          <div class="rate flex align-center">
-            <i class="fa-solid fa-arrow-up"></i>7
-          </div>
-          <div class="rate flex align-center">
-            <i class="fa-solid fa-arrow-down"></i>2
-          </div>
-        </div>
+     
       </div>
     </div>
 

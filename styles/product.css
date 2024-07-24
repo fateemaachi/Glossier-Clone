@@ -39,6 +39,9 @@ header a, span{
   z-index: 5; */
   margin-bottom: 45px;
 }
+.mini-nav li span{
+  color: #000;
+}
 .left-side ul{
   padding: 0;
   margin: 0;
@@ -164,6 +167,7 @@ legend{
 }
 .fcontainer3 {
   width: 100%;
+  padding-top: 10.5vh;
   margin-bottom: 30px;
 }
 .fcont-grid3 {

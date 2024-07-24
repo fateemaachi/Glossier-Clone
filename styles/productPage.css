@@ -14,7 +14,7 @@
 }
 .productDescriptionContainer {
   grid-template-columns: 500px 1fr;
-  padding: 10vh 20px;
+  padding: 17vh 20px;
 }
 .productDescription {
   max-width: 80%;

@@ -16,6 +16,7 @@ $(document).ready(function () {
   });
  
   function  displayProducts(data) {
+  
     const display = $(".fcont-grid3");
     
    
@@ -23,8 +24,8 @@ $(document).ready(function () {
     data.map((item) => {
        const likedIcon = item.has_like? `<i class="fa-solid fa-heart" style="color: red;
        margin-right: 20px;"></i>`: `<i class="fa-regular fa-heart" style="margin-right: 20px;"></i>`
-      display.append(`<a href='product.html?id=${item.id}' class="grid-item" data-id=${item.id}>
-          <div class="img-wrapper mr">
+      display.append(`<div  class="grid-item" data-id=${item.id}>
+          <a href='product.html?id=${item.id}' class="img-wrapper mr">
             <img
               class="front"
               src="${item.images[0]}"
@@ -35,7 +36,7 @@ $(document).ready(function () {
               src="${item.images[1]}"
               alt="img2"
             />
-          </div>
+          </a>
           <div class="new flex justify-btw">
             <p>NEW</p>
           </div>
@@ -48,7 +49,7 @@ $(document).ready(function () {
             <h6>&#8358;${item.price}</h6>
           </div>
           <button class="fbtn4 mr mt">Add to bag</button>
-        </a>`)
+        </div>`)
     })
   }
   $(document).on('click', '.liked', function(){
@@ -65,6 +66,38 @@ $(document).ready(function () {
     })
 
   })
+
+  $(document).on('click', '.liked', function(){
+    const productID = $(this).closest(".grid-item").data('id')
+    const prodExists = products.find(item => item.id === productID);
+
+    if(prodExists) {
+      if(prodExists.has_like){
+        $.ajax({ 
+          url: `${baseUrl}/likes`,
+          method: "DELETE",
+          data:{product_id: productID,
+               user_id: user.id},
+          success: function(){
+            displayProducts(products)
+          }
+        })
+      } else {
+        $.ajax({ 
+          url: `${baseUrl}/likes`,
+          method: "POST",
+          data:{product_id: productID,
+               user_id: user.id},
+          success: function(){
+            displayProducts(products)
+          }
+        })
+      }
+    }
+   
+
+  })
+
 
   
   $(".grid-item").hover(

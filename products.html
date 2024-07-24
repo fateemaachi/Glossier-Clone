@@ -11,6 +11,7 @@
   <script src="https://kit.fontawesome.com/4c9b763486.js"crossorigin="anonymous"
   ></script>
   <link rel="stylesheet" href="styles/product.css">
+  <link rel="stylesheet" href="styles/style.css">
   <link rel="stylesheet" href="styles/shared.css">
  
  
@@ -27,10 +28,10 @@
     </header>
     <nav>
       <div class="logoContainer">
-        <a href="index.html" class="flex column justify-center align-center"
+        <a href="index.html" class="flex column"
           ><img src="./images/logo.png" alt="" class="logo" />
         </a>
-        <p class="hideText">you look good.</p>
+        <!-- <p class="hideText">you look good.</p> -->
       </div>
       <ul>
         <li>skincare</li>
@@ -45,10 +46,57 @@
         <li><i class="fa-solid fa-globe" style="margin-right: 5px"></i>Ng</li>
         <li>search</li>
         <li>stores</li>
-        <li>log in</li>
-        <li id="bag">bag</li>
+        <li id="login"><a href="login.html">log in</a></li>
+        <li id="logout">log out</li>
+        <li id="bag" style="margin-top: -4px;">Bag (<span class="bagCount" style="color: black;"></span>)</li>
       </ul>
     </nav>
+    <div class="mini-nav flex justify-btw">
+      <div class="left-side">
+        <ul class="flex">
+          <li><a href="#">Glossier You</a></li>
+          <li><a href="#">Glossier You Travel Spray</a></li>
+          <li><a href="#" style="text-decoration: underline;">All fragrance</a></li>
+        </ul>
+      </div>
+      <div class="right-side">
+        <ul class="flex">
+          <li style="position: relative;">
+            <a href="#" class="flex" id="show">
+              <span>View</span>
+                <div class="product-wrapper flex">
+                  <span class="Lparen">(</span>
+                  <legend>Product</legend>
+                  <span class="Rparen">)</span>
+                </div>
+            </a>
+            <div class="options">
+              <option class="x">Product</option>
+              <option class="y">Shade</option>
+          </li>
+          <li>
+           <a href="#" class="flex">
+            <span>Filter</span>
+              <div class="filter flex">
+                <span class="Lparen">(</span>
+                <legend>0</legend>
+                <span class="Rparen">)</span>
+              </div>
+           </a>
+          </li>
+          <li>
+            <a href="#" class="flex">
+              <span>Sort</span>
+                <div class="featured flex">
+                  <span class="Lparen">(</span>
+                  <legend>Featured</legend>
+                  <span class="Rparen">)</span>
+                </div>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
     <section class="fragrance">
       <!-- <div class="flex" style="gap: 100px"> -->
       <div>
@@ -99,22 +147,9 @@
             <p class="freeShipping">
               ₦105,910 away from free express shipping
             </p>
+            <div class="cartCont"></div>
 
-            <div class="cartCard">
-              <div class="cartImage">
-                <img src="./images/cartItem-1.avif" alt="" />
-              </div>
-              <div class="cartCard_right flex column justify-between">
-                <div class="cartCard_top flex justify-between">
-                  <p>Utility Sling</p>
-                  <p>₦39,700</p>
-                </div>
-                <div class="cartCard_bottom flex justify-between">
-                  <div class="count">1</div>
-                  <button class="btn-remove">remove</button>
-                </div>
-              </div>
-            </div>
+            
             <div
               class="flex justify-between padding-10"
               style="background-color: #f0f0f0"
@@ -150,7 +185,7 @@
               <p>₦39,700</p>
             </div>
             <a
-              class="btn btn-tertiary"
+              class="butn btn-tert"
               href="./checkout.html"
               style="display: inline-block"
               >checkout</a
@@ -164,8 +199,6 @@
       </div>
     </section>
   </div>
-  <div class="fnav">insert nav here</div>
-  <div class="mini-nav flex justify-btw">
     <div class="left-side">
       <ul class="flex">
         <li><a href="#">Glossier You</a></li>
@@ -210,448 +243,11 @@
         </li>
       </ul>
     </div>
-  </div>
+  </div> -->
   <div class="fcontainer3">
     <div class="fcont-grid3">
-      <div class="grid-item2">
-        <div class="img-wrapper mr">
-          <img class="front" src="https://glossier-prod.imgix.net/files/glossier-summer-capsule-ingridtout-desktop-02.png?auto=compress,format&cs=srgb&w={width}" alt="img9">
-        </div>
-        <p class="overlay">Limited edition summer<br/> collection</p>
-        <button class="fbtn"><a href="#">Shop now</a></button>
-      </div>
-      <div class="grid-item">
-        <div class="img-wrapper mr">
-          <img class="front" src="https://glossier-prod.imgix.net/files/glossier-summer-capsule-towel-carousel-01.png?auto=compress,format&cs=srgb&w={width}" alt="img9">
-          <img class="back" src="https://glossier-prod.imgix.net/files/glossier-summer-capsule-towel-carousel-02.png?auto=compress,format&cs=srgb&w={width}" alt="img10">
-        </div>
-        <div class="new">
-          <p>NEW</p>
-        </div>
-        <div class="cont-info">
-          <p>Towel</p>
-          <p class="c">Summer Capsule Collection</p>
-          <p class="cb" style="display: none;">Solid perfume refill</p>
-          <h6>&#8358;69,400</h6>
-        </div>
-        <button class="fbtn4 mr mt4"><a href="#">Add to bag</a></button>
-      </div>
-      <div class="grid-item">
-        <div class="img-wrapper mr">
-          <img class="front" src="https://glossier-prod.imgix.net/files/glossier-summer-capsule-utility-sling-carousel-01.png?auto=compress,format&cs=srgb&w={width}" alt="img9">
-          <img class="back" src="https://glossier-prod.imgix.net/files/glossier-summer-capsule-utility-sling-carousel-02.png?auto=compress,format&cs=srgb&w={width}" alt="img10">
-        </div>
-        <div class="new">
-          <p>NEW</p>
-        </div>
-        <div class="cont-info">
-          <p>Utility Sling</p>
-          <p class="c">Summer Capsule Collection</p>
-          <p class="cb" style="display: none;">Solid perfume refill</p>
-          <h6>&#8358;39,700</h6>
-        </div>
-        <button class="fbtn4 mr mt4"><a href="#">Add to bag</a></button>
-      </div>
-      <div class="grid-item">
-        <div class="img-wrapper mr">
-          <img class="front" src="https://glossier-prod.imgix.net/files/glossier-summer-capsule-bandana-carousel-01.png?auto=compress,format&cs=srgb&w={width}" alt="img9">
-          <img class="back" src="https://glossier-prod.imgix.net/files/glossier-summer-capsule-bandana-carousel-02.png?auto=compress,format&cs=srgb&w={width}" alt="img10">
-        </div>
-        <div class="new">
-          <p>NEW</p>
-        </div>
-        <div class="cont-info">
-          <p>Bandana</p>
-          <p class="c">Summer capsule collection</p>
-          <p class="cb" style="display: none;">Solid perfume refill</p>
-          <h6>&#8358;26,500</h6>
-        </div>
-        <button class="fbtn4 mr mt4"><a href="#">Add to bag</a></button>
-      </div>
-      <div class="grid-item">
-        <div class="img-wrapper mr">
-          <img class="front" src="https://glossier-prod.imgix.net/files/glossier-summer-capsule-le-ultralip-deco-carousel-01.png?auto=compress,format&cs=srgb&w=360" alt="img3">
-          <img class="back" src="https://glossier-prod.imgix.net/files/glossier-summer-capsulele-deco-carousel-02.png?w=459&auto=compress,format&cs=srgb" alt="img4">
-        </div>
-        <div class="new">
-          <p>NEW</p>
-        </div>
-        <div class="cont-info">
-          <p>Limited Edition Ultralip</p>
-          <p class="c">Summer Capsule Collection</p>
-          <p class="cb" style="display: none;">Decor</p>
-          <h6>&#8358;36,400</h6>
-        </div>
-        <div class="color-grid flex">
-          <div>
-            <p class="brown"></p>
-          </div>
-          <p class="lbrown"></p>
-        </div>
-        <button class="fbtn4 mr mt2"><a href="#">Add to bag</a></button>
-      </div>
-      <div class="grid-item">
-        <div class="img-wrapper mr">
-          <img class="front" src="https://glossier-prod.imgix.net/files/glossier-summer-capsule-ultralip-set-carousel-01.png?auto=compress,format&cs=srgb&w=360" alt="img5">
-          <img class="back" src="https://glossier-prod.imgix.net/files/glossier-summer-capsule-ultralip-set-carousel-02.png?auto=compress,format&cs=srgb&w=360" alt="img6">
-        </div>
-        <div class="new">
-          <p>NEW</p>
-        </div>
-        <div class="cont-info">
-          <p>Summer Ultralip Duo</p>
-          <p class="c">Limited edition</p>
-          <p class="cb" style="display: none;">Limited edition</p>
-          <h6>&#8358;66,100 <span style="text-decoration: line-through;
-          color: grey;">&#8358;72,700</span></h6>
-        </div>
-        <button class="fbtn4 mr mt3"><a href="#">Add to bag</a></button>
-      </div>
-      <div class="grid-item">
-        <div class="img-wrapper mr">
-          <img class="front" src="https://glossier-prod.imgix.net/files/glossier-summer-capsule-comb-carousel-01.png?auto=compress,format&cs=srgb&w=360" alt="img5">
-          <img class="back" src="https://glossier-prod.imgix.net/files/glossier-summer-capsule-comb-carousel-02.png?auto=compress,format&cs=srgb&w=360" alt="img6">
-        </div>
-        <div class="new">
-          <p>NEW</p>
-        </div>
-        <div class="cont-info">
-          <p>Hair Comb</p>
-          <p class="c">Summer Capsule Collection</p>
-          <p class="cb" style="display: none;">Summer Capsule Collection</p>
-          <h6>&#8358;56,200</h6>
-        </div>
-        <button class="fbtn4 mr mt3"><a href="#">Add to bag</a></button>
-      </div>
-      <div class="grid-item">
-        <div class="img-wrapper mr">
-          <img class="front" src="https://glossier-prod.imgix.net/files/glossier-summer-hairclip-carousel-01.png?auto=compress,format&cs=srgb&w=360" alt="img5">
-          <img class="back" src="https://glossier-prod.imgix.net/files/glossier-summer-capsule-hairclip-carousel-02.png?auto=compress,format&cs=srgb&w=360" alt="img6">
-        </div>
-        <div class="new">
-          <p>NEW</p>
-        </div>
-        <div class="cont-info">
-          <p>Claw Clip</p>
-          <p class="c">Summer Capsule Collection</p>
-          <p class="cb" style="display: none;">Summer Capsule Collection</p>
-          <h6>&#8358;36,400</h6>
-        </div>
-        <button class="fbtn4 mr mt3"><a href="#">Add to bag</a></button>
-      </div>
-      <div class="grid-item">
-        <div class="img-wrapper mr">
-          <img class="front" src="https://glossier-prod.imgix.net/files/glossier-summer-capsule-dufflebag-deo-carousel-01.png?auto=compress,format&cs=srgb&w=360" alt="img5">
-          <img class="back" src="https://glossier-prod.imgix.net/files/glossier-summer-capsule-dufflebag-deo-carousel-02.png?auto=compress,format&cs=srgb&w=360" alt="img6">
-        </div>
-        <div class="new">
-          <p>NEW</p>
-        </div>
-        <div class="cont-info">
-          <p>Workout Duo</p>
-          <p class="c">Limited edition</p>
-          <p class="cb" style="display: none;">Limited edition</p>
-          <h6>&#8358;128,800</h6>
-        </div>
-        <button class="fbtn4 mr mt2"><a href="#">Add to bag</a></button>
-      </div>
-      <div class="grid-item">
-        <div class="img-wrapper mr">
-          <img class="front" src="https://glossier-prod.imgix.net/files/glossier-summer-capsule-beautybag-set-carousel-01.png?auto=compress,format&cs=srgb&w=360" alt="img5">
-          <img class="back" src="https://glossier-prod.imgix.net/files/glossier-summer-capsule-beautybag-set-carousel-02.png?auto=compress,format&cs=srgb&w=360" alt="img6">
-        </div>
-        <div class="new">
-          <p>NEW</p>
-        </div>
-        <div class="cont-info">
-          <p>The Summer Beauty Set</p>
-          <p class="c">Limited edition</p>
-          <p class="cb" style="display: none;">Limited edition</p>
-          <h6>&#8358;241,000</h6>
-        </div>
-        <button class="fbtn4 mr mt2"><a href="#">Add to bag</a></button>
-      </div>
-      <div class="grid-item">
-        <div class="img-wrapper mr">
-          <img class="front" src="https://glossier-prod.imgix.net/files/glossier-summer-capsule-waterbottle-bdc-carousel-01.png?auto=compress,format&cs=srgb&w=360" alt="img5">
-          <img class="back" src="https://glossier-prod.imgix.net/files/glossier-summer-capsule-waterbottlebdc-carousel-02.png?auto=compress,format&cs=srgb&w=360" alt="img6">
-        </div>
-        <div class="new">
-          <p>NEW</p>
-        </div>
-        <div class="cont-info">
-          <p>Summer Hydration Duo</p>
-          <p class="c">Limited edition</p>
-          <p class="cb" style="display: none;">Limited edition</p>
-          <h6>&#8358;72,700</h6>
-        </div>
-        <button class="fbtn4 mr mt2"><a href="#">Add to bag</a></button>
-      </div>
-      <div class="grid-item3">
-        <div class="img-wrapper mr">
-          <img class="front" src="https://glossier-prod.imgix.net/files/glossier-complexion-plp-tout-desktop.png?auto=compress,format&cs=srgb&w=360" alt="img5" style="height: 389px;">
-          <!-- <img class="back" src="https://glossier-prod.imgix.net/files/glossier-summer-capsule-hairclip-carousel-02.png?auto=compress,format&cs=srgb&w=360" alt="img6"> -->
-        </div>
-        <div class="cont-info">
-          <p>32 shades of skin-first foundation and concealer<br/> made for real life. </p>
-          <p class="c"></p>
-          <p class="cb" style="display: none;"></p>
-          <!-- <h6>&#8358;36,400</h6> -->
-        </div>
-        <button class="fbtn4 mr mt5"><a href="#">Add to bag</a></button>
-      </div>
-      <div class="grid-item">
-        <div class="img-wrapper mr">
-          <img class="front" src="https://glossier-prod.imgix.net/files/glossier-bdc-quintet-carousel-01_82039169-752c-45c7-8220-9f2dfc630128.png?auto=compress,format&cs=srgb&w=360" alt="img5">
-          <img class="back" src="https://glossier-prod.imgix.net/files/glossier-bdc-set-carousel-02_8702a937-27f2-4553-b40a-a32aa24de7f6.png?auto=compress,format&cs=srgb&w=360" alt="img6">
-        </div>
-        <div class="new">
-          <p>NEW</p>
-        </div>
-        <div class="cont-info">
-          <p>The Balm Dotcom Quintet + Sticker Sheet</p>
-          <p class="c">Limited edition</p>
-          <p class="cb" style="display: none;">Limited edition</p>
-          <h6>&#8358;118,900 <span style="text-decoration: line-through;
-          color: grey;">&#8358;132,100</span></h6>
-        </div>
-        <button class="fbtn4 mr mt3"><a href="#">Add to bag</a></button>
-      </div>
-      <div class="grid-item">
-        <div class="img-wrapper mr">
-          <img class="front" src="https://glossier-prod.imgix.net/files/glossier-carousel-lipline-hold-01.png?auto=compress,format&cs=srgb&w=360" alt="img3">
-          <img class="back" src="https://glossier-prod.imgix.net/files/glossier-carousel-lipline-hold-02.png?w=459&auto=compress,format&cs=srgb" alt="img4">
-        </div>
-        <div class="new">
-          <p>NEW</p>
-        </div>
-        <div class="cont-info">
-          <p>Lip Line</p>
-          <p class="c">Enhancing pencil</p>
-          <p class="cb" style="display: none;">Hold</p>
-          <h6>&#8358;29,800</h6>
-        </div>
-        <div class="color-grid flex">
-          <div>
-            <p class="brown"></p>
-          </div>
-          <p class="lightb"></p>
-          <p class="lightg"></p>
-        </div>
-        <button class="fbtn4 mr mt2"><a href="#">Add to bag</a></button>
-      </div>
-      <div class="grid-item">
-        <div class="img-wrapper mr">
-          <img class="front" src="https://glossier-prod.imgix.net/files/glossier-carousel-lipline-lipgloss-01.png?auto=compress,format&cs=srgb&w=360" alt="img5">
-          <img class="back" src="https://glossier-prod.imgix.net/files/glossier-carousel-lipline-lipgloss-02.png?auto=compress,format&cs=srgb&w=360" alt="img6">
-        </div>
-        <div class="new">
-          <p>NEW</p>
-        </div>
-        <div class="cont-info">
-          <p>Lip Line + Lip Gloss</p>
-          <p class="c">Enhancing pencil + cushiony glass shine</p>
-          <p class="cb" style="display: none;">Enhancing pencil + cushiony glass shine</p>
-          <h6>&#8358;52,900  <span style="text-decoration: line-through;
-          color: grey;">&#8358;59,500</span></h6>
-        </div>
-        <button class="fbtn4 mr mt3"><a href="#">Add to bag</a></button>
-      </div>
-      <div class="grid-item">
-        <div class="img-wrapper mr">
-          <img class="front" src="https://glossier-prod.imgix.net/files/glossier-carousel-lipline-sharpener-01.png?auto=compress,format&cs=srgb&w=360" alt="img5">
-          <img class="back" src="https://glossier-prod.imgix.net/files/glossier-carousel-lipline-sharpener-02.png?auto=compress,format&cs=srgb&w=360" alt="img6">
-        </div>
-        <div class="new">
-          <p>NEW</p>
-        </div>
-        <div class="cont-info">
-          <p>Sharpener</p>
-          <p class="c">German-Engineered Blade</p>
-          <p class="cb" style="display: none;">German-Engineered Blade</p>
-          <h6>&#8358;14,900</h6>
-        </div>
-        <button class="fbtn4 mr mt3"><a href="#">Add to bag</a></button>
-      </div>
-      <div class="grid-item">
-        <div class="img-wrapper mr">
-          <img class="front" src="https://glossier-prod.imgix.net/files/glossier-bdctrio-carousel-1.png?auto=compress,format&cs=srgb&w=360" alt="img5">
-          <img class="back" src="https://glossier-prod.imgix.net/files/glossier-bdc-trio-carousel-2.png?auto=compress,format&cs=srgb&w=360" alt="img6">
-        </div>
-        <div class="new">
-          <p>Original Formula Returns</p>
-        </div>
-        <div class="cont-info">
-          <p>Balm Dotcom Trio</p>
-          <p class="c">Original formula</p>
-          <p class="cb" style="display: none;">Original formula</p>
-          <h6>&#8358;69,400  <span style="text-decoration: line-through;
-          color: grey;">&#8358;79,300</span></h6>
-        </div>
-        <button class="fbtn4 mr mt3"><a href="#">Add to bag</a></button>
-      </div>
-      <div class="grid-item">
-        <div class="img-wrapper mr">
-          <img class="front" src="https://glossier-prod.imgix.net/files/glossier-bdc-strawberry-carousel-1.png?auto=compress,format&cs=srgb&w=360" alt="img3">
-          <img class="back" src="https://glossier-prod.imgix.net/files/glossier-bdc-strawberry-carousel-2.png?w=459&auto=compress,format&cs=srgb" alt="img4">
-        </div>
-        <div class="new">
-          <p>NEW</p>
-        </div>
-        <div class="cont-info">
-          <p>Balm Dotcom</p>
-          <p class="c">Original formula</p>
-          <p class="cb" style="display: none;">Wild Fig</p>
-          <h6>&#8358;29,800</h6>
-        </div>
-        <div class="color-grid flex">
-          <div>
-            <p class="brown"></p>
-          </div>
-          <p class="lightb"></p>
-          <p class="lightg"></p>
-        </div>
-        <button class="fbtn4 mr mt2"><a href="#">Add to bag</a></button>
-      </div>
-      <div class="grid-item">
-        <div class="img-wrapper mr">
-          <img class="front" src="https://glossier-prod.imgix.net/files/glossier-you-50ml-carousel-01.png?auto=compress,format&cs=srgb&w={width}" alt="img">
-          <img class="back" src="https://glossier-prod.imgix.net/files/glossier-you-50ml-carousel-02.png?auto=compress,format&cs=srgb&w={width}" alt="img2">
-        </div>
-        <div class="new">
-          <p>NEW</p>
-        </div>
-        <div class="cont-info">
-          <p>Glossier You</p>
-          <p class="c">Eau de parfum</p>
-          <p class="cb" style="display: none;
-          font-style: italic;">50 mL</p>
-          <h6>&#8358;128,800</h6>
-          <div class="info-btn flex">
-            <button class="fbtn3" style="font-style: italic;"><a href="#">50 mL</a></button>
-            <button class="fbtn3b" style="font-style: italic;"><a href="#">100 mL</a></button>
-          </div>
-        </div>
-        <button class="fbtn4 mr mt2"><a href="#">Add to bag</a></button>
-      </div>
-      <div class="grid-item">
-        <div class="img-wrapper mr">
-          <img class="front" src="https://glossier-prod.imgix.net/files/glossier-you-travelspray-carousel-01.png?auto=compress,format&cs=srgb&w={width}" alt="img7">
-          <img class="back" src="https://glossier-prod.imgix.net/files/glossier-you-travelspray-carousel-02.png?auto=compress,format&cs=srgb&w={width}" alt="img8">
-        </div>
-        <div class="new">
-          <p>NEW SIZE</p>
-        </div>
-        <div class="cont-info">
-          <p>Glossier You</p>
-          <p class="c">Eau de parfum travel spray</p>
-          <p class="cb" style="display: none;
-          font-style: italic;">8 mL</p>
-          <h6>&#8358;52,900</h6>
-          <div class="info-btn flex">
-            <button class="fbtn3" style="font-style: italic;"><a href="#">8 mL</a></button>
-          </div>
-        </div>
-        <button class="fbtn4 mr mt2"><a href="#">Add to bag</a></button>
-      </div>
-      <div class="grid-item">
-        <div class="img-wrapper mr">
-          <img class="front" src="https://glossier-prod.imgix.net/files/glossier-carousel-utilitybag-01.png?auto=compress,format&cs=srgb&w=360" alt="img9">
-          <img class="back" src="https://glossier-prod.imgix.net/files/glossier-carousel-utilitybag-02.png?auto=compress,format&cs=srgb&w=360" alt="img10">
-        </div>
-        <div class="cont-info">
-          <p>Glossier Utility Bag</p>
-          <p class="c">Permanent collection</p>
-          <p class="cb" style="display: none;">Permanent collection</p>
-          <h6>&#8358;90,800</h6>
-        </div>
-        <button class="fbtn4 mr mt2"><a href="#">Add to bag</a></button>
-      </div>
-      <div class="grid-item">
-        <div class="img-wrapper mr">
-          <img class="front" src="https://glossier-prod.imgix.net/files/glossier-field-greensblanket-carousel-01.png?auto=compress,format&cs=srgb&w={width}" alt="img9">
-          <img class="back" src="https://glossier-prod.imgix.net/files/glossier-field-greensblanket-carousel-02.png?auto=compress,format&cs=srgb&w={width}" alt="img10">
-        </div>
-        <div class="cont-info">
-          <p>Field Greens Blanket</p>
-          <p class="c">Limited edition</p>
-          <p class="cb" style="display: none;">Limited edition</p>
-          <h6>&#8358;107,300</h6>
-        </div>
-        <button class="fbtn4 mr mt2"><a href="#">Add to bag</a></button>
-      </div>
-      <div class="grid-item">
-        <div class="img-wrapper mr">
-          <img class="front" src="https://glossier-prod.imgix.net/files/glossier-bodyhero-perfectinglotion-carousel-01.png?auto=compress,format&cs=srgb&w={width}" alt="img9">
-          <img class="back" src="https://glossier-prod.imgix.net/files/glossier-bodyhero-perfectinglotion-carousel-02.png?auto=compress,format&cs=srgb&w={width}" alt="img10">
-        </div>
-        <div class="cont-info">
-          <p>Body Hero Daily Perfecting Lotion</p>
-          <p class="c">Daily perfecting lotion</p>
-          <p class="cb" style="display: none;">Daily perfecting lotion</p>
-          <h6>&#8358;46,300</h6>
-        </div>
-        <button class="fbtn4 mr mt2"><a href="#">Add to bag</a></button>
-      </div>
-      <div class="grid-item">
-        <div class="img-wrapper mr">
-          <img class="front" src="https://glossier-prod.imgix.net/files/glossier-bodyhero-oilwash-carousel-01.png?auto=compress,format&cs=srgb&w={width}" alt="img9">
-          <img class="back" src="https://glossier-prod.imgix.net/files/glossier-bodyhero-oilwash-carousel-02.png?auto=compress,format&cs=srgb&w={width}" alt="img10">
-        </div>
-        <div class="cont-info">
-          <p>Body Hero Daily Oil Wash</p>
-          <p class="c">Nourishing oil wash</p>
-          <p class="cb" style="display: none;">Nourishing oil wash</p>
-          <h6>&#8358;46,300</h6>
-        </div>
-        <button class="fbtn4 mr mt2"><a href="#">Add to bag</a></button>
-      </div>
-      <div class="grid-item">
-        <div class="img-wrapper mr">
-          <img class="front" src="https://glossier-prod.imgix.net/files/glossier-candle-you-carousel-01_8f3ee16e-d330-44ca-9fe3-05c002c16c6b.png?auto=compress,format&cs=srgb&w={width}" alt="img3">
-          <img class="back" src="https://glossier-prod.imgix.net/files/glossier-candle-you-carousel-03_f9e3b819-d7c7-42f5-9cb4-47ba8bc00992.png?w=459&auto=compress,format&cs=srgb" alt="img4">
-        </div>
-        <div class="cont-info">
-          <p>Glossier Candles</p>
-          <p class="c">Scented candles</p>
-          <p class="cb" style="display: none;">Glossier You</p>
-          <h6>&#8358;74,300</h6>
-        </div>
-        <div class="color-grid flex">
-          <div>
-            <p class="brown"></p>
-          </div>
-            <p class="lightb"></p>
-            <p class="lightg"></p>
-        </div>
-        <button class="fbtn4 mr mt2"><a href="#">Add to bag</a></button>
-      </div>
-      <div class="grid-item">
-        <div class="img-wrapper mr">
-          <img class="front" src="https://glossier-prod.imgix.net/products/glossier-you-solid-carousel-01_0a1d59e5-c4e8-4d18-b59d-4482a0f4c1f5.png?auto=compress,format&cs=srgb&w={width}" alt="img5">
-          <img class="back" src="https://glossier-prod.imgix.net/products/glossier-you-solid-carousel-02.png?auto=compress,format&cs=srgb&w={width}" alt="img6">
-        </div>
-        <div class="cont-info">
-          <p>Bandana</p>
-          <p class="c">Perfume solid</p>
-          <p class="cb" style="display: none;">Perfume solid</p>
-          <h6>&#8358;57,800</h6>
-        </div>
-        <button class="fbtn4 mr mt3"><a href="#">Add to bag</a></button>
-      </div>
-      <div class="grid-item">
-        <div class="img-wrapper mr">
-          <img class="front" src="https://glossier-prod.imgix.net/products/glossier-you-solidrefill-carousel-01.png?auto=compress,format&cs=srgb&w={width}" alt="img9">
-          <img class="back" src="https://glossier-prod.imgix.net/products/glossier-you-solidrefill-carousel-02.png?auto=compress,format&cs=srgb&w={width}" alt="img10">
-        </div>
-        <div class="cont-info">
-          <p>Glossier You Solid Refill</p>
-          <p class="c">Solid perfume refill</p>
-          <p class="cb" style="display: none;">Solid perfume refill</p>
-          <h6>&#8358;41,300</h6>
-        </div>
-        <button class="fbtn4 mr mt3"><a href="#">Add to bag</a></button>
-      </div>
+    
+ 
     </div> 
   </div> 
   
@@ -817,6 +413,7 @@
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
   <script src="script/products.js"></script>
+  <script src="script/nav.js"></script>
  
 </body>
 </html>
