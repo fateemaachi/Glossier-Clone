@@ -1,17 +1,72 @@
 $(document).ready(function () {
-  // const baseUrl = "";
-  // $.ajax({
-  //   url: `${baseUrl}/products`,
-  //   method: "GET",
-  //   success: function (prod) {
-  //     prod.map((item, index) => {
-  //       if (index < 8) {
-  //         console.log(item);
-  //       }
-  //     });
-  //   },
-  // });
-  // Hover effect
+  const baseUrl = "http://ecommerce.reworkstaging.name.ng/v2";
+  const merchant_id = "669e578c6996967a7dcd7a85";
+  let products = [];
+  let liked = false;
+  const user = JSON.parse(localStorage.getItem('formData')) || {};
+
+
+  $.ajax({
+    url: `${baseUrl}/products?merchant_id=${merchant_id}`,
+    method: "GET",
+    success: function (response) {
+      products = response.data
+      displayProducts(response.data);
+    },
+  });
+ 
+  function  displayProducts(data) {
+    const display = $(".fcont-grid3");
+    
+   
+    display.empty();
+    data.map((item) => {
+       const likedIcon = item.has_like? `<i class="fa-solid fa-heart" style="color: red;
+       margin-right: 20px;"></i>`: `<i class="fa-regular fa-heart" style="margin-right: 20px;"></i>`
+      display.append(`<a href='product.html?id=${item.id}' class="grid-item" data-id=${item.id}>
+          <div class="img-wrapper mr">
+            <img
+              class="front"
+              src="${item.images[0]}"
+              alt="img"
+            />
+            <img
+              class="back"
+              src="${item.images[1]}"
+              alt="img2"
+            />
+          </div>
+          <div class="new flex justify-btw">
+            <p>NEW</p>
+          </div>
+          <div class="cont-info">
+          <div class="flex justify-btw ">
+              <p>${item.title}</p>
+            <p class="liked" id="likes">${likedIcon}</p>
+          </div>
+            <p class="c">Summer Capsule Collection</p>
+            <h6>&#8358;${item.price}</h6>
+          </div>
+          <button class="fbtn4 mr mt">Add to bag</button>
+        </a>`)
+    })
+  }
+  $(document).on('click', '.liked', function(){
+    const productID = $(this).closest(".grid-item").data('id')
+    $.ajax({ 
+      url: `${baseUrl}/likes`,
+      method: "POST",
+      data:{product_id: productID,
+           user_id: user.id},
+      success: function(response){
+        console.log(response)
+        displayProducts(products)
+      }
+    })
+
+  })
+
+  
   $(".grid-item").hover(
     function () {
       $(this).find(".front").stop().fadeTo(500, 0);

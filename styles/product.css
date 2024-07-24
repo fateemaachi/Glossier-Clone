@@ -176,6 +176,7 @@ legend{
   overflow-x: hidden;
 }
 .grid-item {
+  display: inline-block;
   position: relative;
   cursor: pointer;
 }

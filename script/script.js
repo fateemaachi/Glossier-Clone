@@ -1,16 +1,60 @@
 $(document).ready(function () {
-  // const baseUrl = "";
-  // $.ajax({
-  //   url: `${baseUrl}/products`,
-  //   method: "GET",
-  //   success: function (prod) {
-  //     prod.map((item, index) => {
-  //       if (index < 8) {
-  //         console.log(item);
-  //       }
-  //     });
-  //   },
-  // });
+  const user = JSON.parse(localStorage.getItem('formData')) || {}
+  const baseUrl = "http://ecommerce.reworkstaging.name.ng/v2";
+  const merchant_id = "669e578c6996967a7dcd7a85";
+  const slickItems = [];
+  $.ajax({
+    url: `${baseUrl}/products?merchant_id=${merchant_id}`,
+    method: "GET",
+    success: function (prod) {
+      prod.data.map((item, index) => {
+        if (index < 8) {
+          slickItems.push(item)
+        }
+      });
+      // displayProducts(slickItems);
+    },
+  });
+ 
+  function  displayProducts(slickItems) {
+    const display = $('#gridWrapper')
+    display.empty();
+    slickItems.map((item) => {
+      display.append(`<div class="grid-item">
+          <div class="img-wrapper mr">
+            <img
+              class="front"
+              src="${item.images[0]}"
+              alt="img"
+            />
+            <img
+              class="back"
+              src="${item.images[1]}"
+              alt="img2"
+            />
+          </div>
+          <div class="new">
+            <p>NEW</p>
+          </div>
+          <div class="cont-info">
+            <p>${item.title}</p>
+            <p class="c">Summer Capsule Collection</p>
+            <h6>&#${item.price}</h6>
+          </div>
+          <button class="fbtn4 mr mt"><a href="#">Add to bag</a></button>
+        </div>`)
+    })
+  }
+  // displayProducts()
+
+  const loginBtn = $('#login');
+  const logoutBtn= $('#logout');
+  if(user){
+    loginBtn.hide();
+    logoutBtn.show();
+  }
+
+
 
   $(".fcont-grid3").slick({
     infinite: true,
@@ -77,7 +121,4 @@ $(document).ready(function () {
   });
 });
 
-// var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
-// var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
-//   return new bootstrap.Tooltip(tooltipTriggerEl)
-// });
+

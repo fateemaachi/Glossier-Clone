@@ -41,10 +41,10 @@
       </header>
       <nav>
         <div class="logoContainer">
-          <a href="index.html" class="flex column justify-center align-center"
+          <a href="index.html" class="flex column"
             ><img src="./images/logo.png" alt="" class="logo" />
           </a>
-          <p class="hideText">you look good.</p>
+          <!-- <p class="hideText">you look good.</p> -->
         </div>
         <ul>
           <li>skincare</li>
@@ -59,7 +59,8 @@
           <li><i class="fa-solid fa-globe" style="margin-right: 5px"></i>Ng</li>
           <li>search</li>
           <li>stores</li>
-          <li><a href="./login.html"> log in</a></li>
+          <li id="login"><a href="login.html">log in</a></li>
+          <li id="logout"><a href="login.html">log out</a></li>
           <li id="bag">bag</li>
         </ul>
       </nav>
@@ -113,22 +114,9 @@
               <p class="freeShipping">
                 ₦105,910 away from free express shipping
               </p>
+              <div class="cartCont"></div>
 
-              <div class="cartCard">
-                <div class="cartImage">
-                  <img src="./images/cartItem-1.avif" alt="" />
-                </div>
-                <div class="cartCard_right flex column justify-between">
-                  <div class="cartCard_top flex justify-between">
-                    <p>Utility Sling</p>
-                    <p>₦39,700</p>
-                  </div>
-                  <div class="cartCard_bottom flex justify-between">
-                    <div class="count">1</div>
-                    <button class="btn-remove">remove</button>
-                  </div>
-                </div>
-              </div>
+              
               <div
                 class="flex justify-between padding-10"
                 style="background-color: #f0f0f0"
@@ -164,7 +152,7 @@
                 <p>₦39,700</p>
               </div>
               <a
-                class="btn btn-tertiary"
+                class="butn btn-tert"
                 href="./checkout.html"
                 style="display: inline-block"
                 >checkout</a
@@ -213,7 +201,7 @@
       <button class="fbtn3 mr"><a href="#">Shop all products</a></button>
     </div>
     <div class="fcontainer3">
-      <div class="fcont-grid3">
+      <div class="fcont-grid3" id="gridWrapper">
         <div class="grid-item">
           <div class="img-wrapper mr">
             <img

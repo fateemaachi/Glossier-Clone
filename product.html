@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="./styles/shared.css" />
+    <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="./styles/productPage.css" />
+    
     <script
       src="https://code.jquery.com/jquery-3.7.1.min.js"
       integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
@@ -28,6 +30,12 @@
   </head>
   <body>
     <div class="nav">
+      <header>
+        <span>
+          <a href="#">limited edition balm quintet:</a> 5 flavors + sticker
+          sheet!</span
+        >
+      </header>
       <nav>
         <div class="logoContainer">
           <a href="index.html" class="flex column"
@@ -102,22 +110,9 @@
               <p class="freeShipping">
                 ₦105,910 away from free express shipping
               </p>
+              <div class="cartCont"></div>
 
-              <div class="cartCard">
-                <div class="cartImage">
-                  <img src="./images/cartItem-1.avif" alt="" />
-                </div>
-                <div class="cartCard_right flex column justify-between">
-                  <div class="cartCard_top flex justify-between">
-                    <p>Utility Sling</p>
-                    <p>₦39,700</p>
-                  </div>
-                  <div class="cartCard_bottom flex justify-between">
-                    <div class="count">1</div>
-                    <button class="btn-remove">remove</button>
-                  </div>
-                </div>
-              </div>
+              
               <div
                 class="flex justify-between padding-10"
                 style="background-color: #f0f0f0"
@@ -168,39 +163,7 @@
       </section>
     </div>
     <div class="productDescriptionContainer grid">
-      <div class="productDescription">
-        <h2 class="heading">Utility Sling</h2>
-        <div class="flex align-center">
-          <p>Summer Capsule Collection</p>
-          <div
-            class="flex align-center"
-            style="font-size: 10px; margin-left: 20px"
-          >
-            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
-            ><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
-            ><i class="fa-solid fa-star"></i>
-            <p style="margin-left: 10px">(1)</p>
-          </div>
-        </div>
-        <div class="btnContainer">
-          <span class="tag">New</span>
-          <button class="butn btn-sec">Add to bag #39,000</button>
-        </div>
-        <div class="description">
-          <p>
-            All of your summer essentials in one.
-            <br />
-            <br />
-            A limited edition, versatile rope sling complete with a key clip,
-            handy bottle opener and sunny Three Eye Smiley charm. Wear around
-            your neck or toss in your bag.
-          </p>
-        </div>
-      </div>
-      <div class="productImageContainer grid">
-        <img src="./images/productItem.png" alt="" />
-        <img src="./images/productItem2.png" alt="" />
-      </div>
+      
     </div>
     <div class="getLook">
       <p>GET THE LOOK</p>
@@ -240,6 +203,7 @@
           </div>
           <div class="new">
             <p>NEW</p>
+            <p id="likes"><i class="fa-solid fa-heart" style="color: #f0f0f0;"></i></p>
           </div>
           <div class="cont-info">
             <p>Towel</p>
@@ -285,6 +249,7 @@
               alt="img6"
             />
           </div>
+          <a href=""></a>
           <div class="new">
             <p>NEW</p>
           </div>
@@ -424,9 +389,7 @@
         style="margin-bottom: 20px"
       >
         <p>Review</p>
-        <button class="butn btn-prim reviewBtn" style="width: 15%">
-          Write a review
-        </button>
+        
       </div>
       <div class="grid reviewCard">
         <div class="flex">
@@ -446,15 +409,18 @@
             <p>Average rating</p>
           </div>
         </div>
-        <div>
-          <input type="text" placeholder="Search for a keyword or a keyword" />
+        <div class="flex justify-between">
+          <input  id='review' type="text" placeholder="Write a review" />
+          <button class="butn btn-prim reviewBtn" style="width: 15%">
+            Write a review
+          </button>
         </div>
         <div class="flex rateContainer">
-          <p>Sort by</p>
+          <!-- <p>Sort by</p> -->
           <span>( Newest first )</span>
         </div>
       </div>
-      <div class="grid reviewCard">
+      <div class="grid reviewCard reviews">
         <div>
           <div class="flex column">
             <p>11.07.24</p>
