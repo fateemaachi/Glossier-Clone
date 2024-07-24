@@ -1,4 +1,17 @@
 $(document).ready(function () {
+  // const baseUrl = "";
+  // $.ajax({
+  //   url: `${baseUrl}/products`,
+  //   method: "GET",
+  //   success: function (prod) {
+  //     prod.map((item, index) => {
+  //       if (index < 8) {
+  //         console.log(item);
+  //       }
+  //     });
+  //   },
+  // });
+
   $(".fcont-grid3").slick({
     infinite: true,
     slidesToShow: 4,
@@ -41,7 +54,7 @@ $(document).ready(function () {
     }
   );
   $(".grid-item").click(function () {
-    location.href = "product.html";
+    window.location.href = "product.html?id=1";
   });
 
   $("#email").mouseout(function () {
