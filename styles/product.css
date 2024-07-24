@@ -199,6 +199,10 @@ legend{
   font-size: 12px;
   padding: 2px 5px;
 }
+.new i{
+  font-size: 12px;
+  color: #f7f7f7;
+}
 .img-wrapper {
   position: relative;
   overflow: hidden;
@@ -427,7 +431,7 @@ input{
   color: grey;
 }
 #subBtn{
-  height: 52px;
+  height: 46px;
   padding: 10px;
   background-color: #fff;
   border-top: none;
