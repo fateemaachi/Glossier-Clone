@@ -2,18 +2,20 @@ $(document).ready(function () {
   const baseUrl = "http://ecommerce.reworkstaging.name.ng/v2";
   const merchant_id = "669e578c6996967a7dcd7a85";
   let products = [];
-  let liked = false;
   const user = JSON.parse(localStorage.getItem('formData')) || {};
 
+  function getProducts(){
+    $.ajax({
+      url: `${baseUrl}/products?merchant_id=${merchant_id}`,
+      method: "GET",
+      success: function (response) {
+        products = response.data
+        displayProducts(products);
+      },
+    });  
+  }
+  getProducts()
 
-  $.ajax({
-    url: `${baseUrl}/products?merchant_id=${merchant_id}`,
-    method: "GET",
-    success: function (response) {
-      products = response.data
-      displayProducts(response.data);
-    },
-  });
  
   function  displayProducts(data) {
   
@@ -52,20 +54,6 @@ $(document).ready(function () {
         </div>`)
     })
   }
-  $(document).on('click', '.liked', function(){
-    const productID = $(this).closest(".grid-item").data('id')
-    $.ajax({ 
-      url: `${baseUrl}/likes`,
-      method: "POST",
-      data:{product_id: productID,
-           user_id: user.id},
-      success: function(response){
-        console.log(response)
-        displayProducts(products)
-      }
-    })
-
-  })
 
   $(document).on('click', '.liked', function(){
     const productID = $(this).closest(".grid-item").data('id')
@@ -77,9 +65,9 @@ $(document).ready(function () {
           url: `${baseUrl}/likes`,
           method: "DELETE",
           data:{product_id: productID,
-               user_id: user.id},
-          success: function(){
-            displayProducts(products)
+            user_id: user.id},
+            success: function(){
+            getProducts()
           }
         })
       } else {
@@ -87,16 +75,14 @@ $(document).ready(function () {
           url: `${baseUrl}/likes`,
           method: "POST",
           data:{product_id: productID,
-               user_id: user.id},
-          success: function(){
-            displayProducts(products)
+            user_id: user.id},
+            success: function(){
+            getProducts()
           }
-        })
+        });
       }
     }
-   
-
-  })
+  });
 
 
   
@@ -114,9 +100,9 @@ $(document).ready(function () {
       $(this).find(".c").show();
     }
   );
-  $('.grid-item').click(function(){
-    location.href = "product.html"
-  })
+  // $('.grid-item').click(function(){
+  //   location.href = "product.html"
+  // })
   $('#show').click(function(){
     $('.options').toggle()
   });

@@ -54,6 +54,10 @@ $(document).ready(function () {
         method: "POST",
         data: { email: email, password: password },
         success: function (response) {
+          if(response.code === 404){
+            alert('Invalid username or password');
+            return
+          }
           let userDetails = response;
           userDetails.isLoggedIn = true;
           localStorage.setItem("formData", JSON.stringify(userDetails));

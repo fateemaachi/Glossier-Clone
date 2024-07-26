@@ -8,6 +8,10 @@ $(document).ready(function (){
  //open edit profile details modal
  $('#profilePic').click(function(){
    $('#myModal').show();
+   $('#fName').val(user.first_name);
+   $('#lName').val(user.last_name);
+   $('#email2').val(user.email);
+   $('#number').val(user.phone);
  });
 
  //cancel modal
@@ -61,7 +65,16 @@ $(document).ready(function (){
       $('#myModal2').hide()
     }
     
-   })
+   });
  
  });
+
+ //display new details
+ function loadDetails () {
+  $('#firstName').text(user.first_name);
+  $('#lastName').text(user.last_name);
+  $('#email').text(user.email);
+  $('#phone').text(user.phone);
+ }
+ loadDetails();
 });

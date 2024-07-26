@@ -5,7 +5,8 @@ $(document).ready(function () {
   const id = urlParams.get("id");
   const user = JSON.parse(localStorage.getItem('formData')) || {};
   let product = {};
-  let reviews = []
+  let reviews = [];
+  let reviewId = "";
   const cart =JSON.parse(localStorage.getItem('cart')) || []
 
   if(user) {
@@ -18,8 +19,8 @@ $(document).ready(function () {
     url: `${baseUrl}/products/${id}`,
     method: "GET",
     success: function (response) {
-      displayProduct(response)
-      product = response
+      product = response;
+      displayProduct(product)
     },
   });
 
@@ -29,7 +30,7 @@ $(document).ready(function () {
   display.append(` <div class="productDescription">
         <h2 class="heading">${data.title}</h2>
         <div class="flex align-center">
-          <p>Summer Capsule Collection</p>
+          <p>${data.descp.substring(0,10)}...</p>
           <div
             class="flex align-center"
             style="font-size: 10px; margin-left: 20px"
@@ -72,6 +73,23 @@ $(document).ready(function () {
 
  $(document).on('click','.reviewBtn', function (){
   const review = $('#review').val().trim();
+
+  if(reviewId !== ""){
+    $.ajax({
+      url: `${baseUrl}/reviews/${reviewId}`,
+      method: "PUT",
+      data: {
+        product_id: product.id,
+        user_id: user.id,
+        text: review
+      },
+      success:function(){
+        alert('Review added successfully')
+        
+        getProductReviews()
+      }
+    })
+  } else {
     $.ajax({
       url: `${baseUrl}/reviews`,
       method: "POST",
@@ -80,11 +98,16 @@ $(document).ready(function () {
         user_id: user.id,
         text: review
       },
-      success:function(response){
-        console.log(response);
+      success:function(){
+        alert('Review added successfully')
+        
+        getProductReviews()
       }
     })
-
+  }
+    $('#review').val('')
+    reviewId = "";
+    $(".reviewBtn").text('Write review');
    
  })
   function getProductReviews(){
@@ -94,7 +117,6 @@ $(document).ready(function () {
       success: function(response){
         reviews = response
         displayReviews(response)
-        console.log(response)
       }
     })
   }
@@ -135,9 +157,15 @@ $(document).ready(function () {
               ><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
               ><i class="fa-solid fa-star"></i>
             </div>
-            <p>
-              ${item.text}
-            </p>
+            <div class="flex justify-between reviewBox" data-id=${item.id}>
+              <p>
+                ${item.text}
+              </p>
+              <div>
+                  <i class="fa-regular fa-pen-to-square edit"></i>
+                  <i class="fa-solid fa-trash delete" style="color: #df1111; margin-left: 20px;"></i>
+                </div>
+            </div>
            
           </div>
         </div>
@@ -151,5 +179,39 @@ $(document).ready(function () {
         </div>`)
     })
   }
+
+  $(document).on("click", ".edit", function () {
+    const id = $(this).closest('.reviewBox').data('id');
+    const reviewExists = reviews.find(review => review.id === id);
+
+    if(reviewExists){
+      $('#review').val(reviewExists.text);
+      $(".reviewBtn").text('Update review');
+      reviewId = id;
+    }
+  })
+
+  $(document).on("click", ".delete", function () {
+    const id = $(this).closest('.reviewBox').data('id');
+    const reviewExists = reviews.find(review => review.id === id);
+    
+    if(reviewExists){
+      const confirmDel = confirm('Are you sure you want to delete review?');
+      if(confirmDel){
+        $.ajax({
+          url: `${baseUrl}/reviews`,
+          method: "DELETE",
+          data: {
+            review_id: id,
+            user_id: user.id,
+          },
+          success:function(){
+            alert('Review deleted successfully')
+            getProductReviews()
+          }
+        })
+      }
+    }
+  })
 
 });
