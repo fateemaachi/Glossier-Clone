@@ -24,4 +24,44 @@ $(document).ready(function (){
  $('#cancel2').click(function(){
    $('#myModal2').hide();
  });
+
+ //edit user details
+ $('#add').on('click', function(){
+  const info = {
+        first_name:$('#fName').val().trim(),
+        last_name: $('#lName').val().trim(),
+        email: $('#email2').val().trim(),
+        phone:$('#number').val().trim()
+  }
+  $.ajax({
+    url: `${baseURL}/users/${user.id}`,
+    method: 'PUT',
+    data: info,
+    success: function(data){
+      localStorage.setItem('formData', JSON.stringify(data));
+      alert('details updated successfully');
+      $('#myModal').hide()
+    }
+  });
+
+ });
+ //edit user password
+ $('#add2').on('click', function(){
+   const pass = {
+    old_password: $('#pass').val(),
+    new_password: $('#pass2').val()
+   }
+   $.ajax({
+    url: `${baseURL}/users/${user.id}/change-passwd`,
+    method: "PUT",
+    data: pass,
+    success: function(data){
+      console.log(data)
+      alert('password updated successfully');
+      $('#myModal2').hide()
+    }
+    
+   })
+ 
+ });
 });
